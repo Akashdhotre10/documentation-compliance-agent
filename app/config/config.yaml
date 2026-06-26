@@ -1,0 +1,27 @@
+website:
+
+  base_url: "https://white-cliff-0bca3ed00.1.azurestaticapps.net/"
+
+  login_url: "/login"
+
+credentials:
+
+  email: "admin@gmail.com"
+
+  password: "password"
+
+pdf:
+
+  path: "data/guidelines/WaiverPro-User-Guidelines.pdf"
+
+output:
+
+  extracted: "data/extracted"
+
+  screenshots: "data/screenshots"
+
+  reports: "data/reports"
+
+vector_db:
+
+  path: "data/vector_db"
