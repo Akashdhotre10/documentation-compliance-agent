@@ -1,0 +1,32 @@
+from app.extractor.browser import BrowserManager
+from app.extractor.login import Login
+from app.extractor.crawler import WebsiteCrawler
+from app.extractor.ui_extractor import UIExtractor
+
+browser = BrowserManager(headless=False)
+
+playwright, chrome, page = browser.launch()
+
+Login(page).login()
+
+crawler = WebsiteCrawler(page)
+
+extractor = UIExtractor(page)
+
+for page_name in crawler.NAVIGATION:
+
+    crawler.visit(page_name)
+
+    data = extractor.extract()
+
+    filename = page_name.lower().replace(" ", "_")
+
+    extractor.save(filename, data)
+
+    print(f"Saved {filename}.json")
+
+input("\nFinished. Press ENTER...")
+
+chrome.close()
+
+playwright.stop()

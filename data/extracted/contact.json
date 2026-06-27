@@ -1,0 +1,43 @@
+{
+    "url": "https://white-cliff-0bca3ed00.1.azurestaticapps.net/dashboard/contact",
+    "title": "Contact",
+    "headings": [
+        "Contact",
+        "Contact Information",
+        "Quick Response",
+        "Send us a message"
+    ],
+    "buttons": [
+        "+ New Application",
+        "Send Message",
+        "Take a Tour"
+    ],
+    "sidebar": [
+        "My Applications",
+        "Facilities",
+        "Action Items",
+        "User Management",
+        "Announcements",
+        "Settings",
+        "FAQs",
+        "Tickets",
+        "Contact"
+    ],
+    "search_boxes": [
+        "How can we help?",
+        "Your name",
+        "your@email.com"
+    ],
+    "table_headers": [],
+    "links": [
+        "Action Items",
+        "Announcements",
+        "Contact",
+        "FAQs",
+        "Facilities",
+        "My Applications",
+        "Settings",
+        "Tickets",
+        "User Management"
+    ]
+}

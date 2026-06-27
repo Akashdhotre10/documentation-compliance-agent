@@ -1,0 +1,46 @@
+{
+    "url": "https://white-cliff-0bca3ed00.1.azurestaticapps.net/dashboard/user-management",
+    "title": "User Management",
+    "headings": [
+        "User Management"
+    ],
+    "buttons": [
+        "+ New Application",
+        "Invite User",
+        "Member (0)",
+        "Pending Invites",
+        "Take a Tour"
+    ],
+    "sidebar": [
+        "My Applications",
+        "Facilities",
+        "Action Items",
+        "User Management",
+        "Announcements",
+        "Settings",
+        "FAQs",
+        "Tickets",
+        "Contact"
+    ],
+    "search_boxes": [
+        "Search"
+    ],
+    "table_headers": [
+        "Name",
+        "Role",
+        "District",
+        "Type",
+        "License Number"
+    ],
+    "links": [
+        "Action Items",
+        "Announcements",
+        "Contact",
+        "FAQs",
+        "Facilities",
+        "My Applications",
+        "Settings",
+        "Tickets",
+        "User Management"
+    ]
+}

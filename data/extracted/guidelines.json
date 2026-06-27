@@ -1,0 +1,67 @@
+[
+    {
+        "title": "About This Guide",
+        "content": "WaiverPro is a web-based platform for managing healthcare regulatory waiver requests from\nsubmission through approval. This manual explains how to navigate the application, submit and\ntrack waiver requests, manage facilities and users, and obtain support.\nWho should use this guide\nThis guide is written for provider-portal users — facility administrators and staff who prepare,\nsubmit, and monitor waiver applications on behalf of their organisation.\nScope\nThis document describes the provider-facing web application. Every screen, label, and button\ndescribed here reflects the live product. Figures show live account data; the specific records on your\nscreen will differ from the examples pictured.\nCONVENTIONS\nButton labels and on-screen text are shown in bold. Web addresses and field values are shown in\nmonospace . Each section also lists the URL path of the screen it describes, relative to the site’s base\naddress.\n",
+        "page": 3
+    },
+    {
+        "title": "Accessing WaiverPro — The Landing Page",
+        "content": "URL /\nOpen WaiverPro in your web browser. The public landing page introduces the platform and lists the\nwaiver programs currently available.\nKey elements of the landing page:\nHeading — “Healthcare Waiver Management”, with the tagline “Streamline your regulatory\nwaiver process from submission to approval”.\nSearch waivers — the search box (placeholder Search waivers ) filters the program list by\nname.\nAll Waiver Programs — quick-filter buttons name each program, and each published program\nappears as a card showing its name, description, Processing Time, Waiver Period, and an\neligibility checklist. A program that is not currently open shows a status note (for example,\n“Expired”, with the dates it was available).\nGetting Started — the button in the top-right corner takes you to the sign-in screen.\nFooter — links to Privacy Policy and Terms of Service, with the line “Copyright © 2025\nWaiverPro”.\nTo begin, click Getting Started in the top-right corner of the page.\n",
+        "page": 4
+    },
+    {
+        "title": "Signing In",
+        "content": "URL /login\nThe sign-in screen authenticates you into the provider portal.\n1. Enter your Email (placeholder m@example.com ).\n2. Enter your Password. Passwords must be at least 6 characters.\n3. Click Login.\nIf you have forgotten your password, use the Forgot your password? link beside the password\nfield to begin recovery.\nAfter a successful sign-in you are taken to the My Applications dashboard.\n",
+        "page": 6
+    },
+    {
+        "title": "The Application Workspace & Navigation",
+        "content": "URL Shared by all signed-in pages ( /dashboard/… )\nOnce signed in, every page shares a common layout: a fixed sidebar on the left and a header along\nthe top.\nnotifications, and your account menu.\nThe sidebar\nAt the top of the sidebar the brand WaiverPro appears with the label “Healthcare Waiver\nManagement”, followed by the primary action button + New Application. The navigation items, in\norder, are:\nMy Applications — your waiver applications dashboard.\nFacilities — facilities you manage or belong to.\nAction Items — pending items that require your attention.\nUser Management — manage the users in your organisation.\nAnnouncements — system and program updates.\nSettings — account and preference settings.\nBelow a Support heading, four further items appear: FAQs, Tickets, Contact, and Take a Tour\n(which launches a guided walkthrough of the interface).\nThe header\nSearch — a search box for the current page.\nNotifications — a bell icon with a badge showing the number of outstanding action items.\nAccount — your initials appear as an avatar; opening it reveals your email address and a\nLogout button.\nTIP\nThe + New Application button is available from the sidebar on every page, so you can start a waiver\nrequest at any time.\n",
+        "page": 7
+    },
+    {
+        "title": "My Applications",
+        "content": "URL /dashboard/my-applications\nThe My Applications dashboard is your home screen. It lists your waiver applications and\nsummarises them in two charts.\nsummary charts.\nFiltering the list\nTwo layers of filters narrow the table, each showing a live count:\nWaiver-type tabs — All, Patient Needs Waiver (PNW) Request, Program Flexibility\n(PF) Request, and Workforce Shortage Waiver (WSW) Request.\nStatus chips — All Applications, Draft, Submitted, Reopen, In Review, Rejected,\nApproved, Evaluator Review, Manager Review, Revoked, and Expired.\nThe applications table\nApplications are listed with the columns Waiver ID, Name, Facility, Type, Status, and Created\non. Use the Rows per page control and the page arrows to page through results.\nSummary charts\nApplications by Type — a doughnut chart breaking your applications down by waiver type\n(PNW, PF, WSW).\nApplications Overview — a doughnut chart breaking your applications down by status.\n",
+        "page": 9
+    },
+    {
+        "title": "Submitting a New Waiver Application",
+        "content": "URL Opens as a panel over the current page (no dedicated URL)\nClick + New Application in the sidebar to open the application panel. A progress bar and the step\ntabs Waiver Type, Select Location, and Fill Application show where you are.\nStep 1 — Waiver Type\nUnder “Select Waiver Type”, choose the waiver request that best matches your needs. Each type —\nPatient Needs Waiver (PNW) Request, Program Flexibility (PF) Request, and\nWorkforce Shortage Waiver (WSW) Request — appears as a selectable card with a\ndescription. A type that is not currently open is marked (for example, “Expired”) and cannot be\nselected; the panel notes the dates it was available.\nStep 2 — Select Location\nChoose the facility (and facility type) the request applies to.\nStep 3 — Fill Application\nComplete the request details — contact number, dates, description, supporting documents, and the\nrequired acknowledgement — then submit.\nUse Next to advance through the steps; you can return to an earlier step to make changes, and\nsubmit your completed request on the final step. The × button in the top-right corner closes the\npanel at any time.\n",
+        "page": 11
+    },
+    {
+        "title": "Facilities",
+        "content": "URL /dashboard/facilities\nThe Facilities page lists the facilities in your organisation and tracks the status of their waiver\napplications.\nFilters\nA row of status chips filters by application due-date status: All Facilities, Due Soon, Upcoming,\nScheduled, Overdue, and No Status. You can further filter by Role and Type, or search by\nname.\nNOTE\nThe status chips and the Status / License Exp Date columns are part of the Facilities Status\nTracking feature, which can be turned on or off under Settings → Features.\nThe facilities table\nFacilities are listed with the columns Name, Type, License Number, License Exp Date, and\nStatus. Below the table, the Facilities Status Overview summarises the portfolio. Use the paging\ncontrols to move through results.\n",
+        "page": 13
+    },
+    {
+        "title": "Action Items",
+        "content": "URL /dashboard/action-items\nThe Action Items page collects pending items that require your attention.\nItems are listed with the columns ID, Name, Status, Priority, and Due Date. Each Name links\nto the relevant record so you can act on it. You can filter the list by Status and Priority using the\ncontrols at the top right.\nStatus values include Done and In Process.\nPriority values are High, Medium, and Low.\nDue Date shows how far an item is overdue or when it is due.\nA summary doughnut chart shows the total number of action items broken down by priority. The\nsame outstanding count is reflected by the notification badge in the header.\n",
+        "page": 15
+    },
+    {
+        "title": "User Management",
+        "content": "URL /dashboard/user-management\nThe User Management page lets organisation administrators view and manage the people who\ncan access WaiverPro on behalf of the organisation.\nTwo tabs separate current Members from Pending Invites, each showing a count. The table lists\neach user with the columns Name, Email, Associated Facilities, Last Updated, and Actions\n(edit and remove). To add someone, click Invite User in the top-right corner. Use the search box to\nlocate a specific user, and the paging controls to move through the list.\n",
+        "page": 17
+    },
+    {
+        "title": "Announcements",
+        "content": "URL /dashboard/announcements\nThe Announcements page keeps you informed: “Stay up to date with important system and\nprogram updates.”\nEach announcement shows its title, a status badge — Active, Upcoming, or Expired — an\noptional priority badge (High, Medium, or Low), and its date. Click an announcement to expand\nand read its full detail. A search box helps you find a specific announcement.\n",
+        "page": 18
+    },
+    {
+        "title": "Support — FAQs, Tickets & Contact",
+        "content": "The Support section of the sidebar offers three ways to get help.\nFAQs\nURL /dashboard/faqs\nThe FAQs page answers common questions about WaiverPro. Click any question to expand its\nanswer.\nSupport Tickets\nURL /dashboard/tickets\nThe Tickets page (“Support Tickets — Track and manage your support tickets.”) lists your tickets as\ncards showing the ticket number, status and priority badges, and the created/updated times. Filter\nby Status and Priority, and open any ticket with View Details. Click + New Ticket to raise one.\nIn the Create New Support Ticket panel, provide a Title, choose the Related Application,\nselect a Category and Sub Category, add a Description, attach any files, and click Create\nTicket.\nContact\nURL /dashboard/contact\nThe Contact page (“Get in touch with our support team”) provides a message form and the support\nteam’s direct details.\nSupport contact details:\nEmail: support@waiverpro.com\nPhone: +1 (555) 123-4567\nAddress: 123 Healthcare Plaza, Suite 400, New York, NY 10001\nBusiness hours: Monday – Friday, 9:00 AM – 6:00 PM EST (closed weekends)\nMessages sent through the form are typically answered within 24 hours during business days.\n",
+        "page": 19
+    },
+    {
+        "title": "Settings",
+        "content": "URL /dashboard/settings\nThe Settings page (“Manage your account and preferences”) shows your organisation and is\norganised into four cards.\nOrganisation — the organisation your account belongs to is shown at the top of the page.\nProfile Information — your first name, last name, email (read-only), and phone number. Click\nSave Changes to update.\nNotifications — toggles for Email Notifications, Status Updates, and Action Items.\nSecurity — change your password. A new password must be at least 6 characters long. Click\nChange Password to apply.\nFeatures — toggle experimental or upcoming features: Facilities Status Tracking (shows\napplication due dates and status on the Facilities page) and the FAQ Assistant Chatbot (off by\ndefault).\n",
+        "page": 23
+    },
+    {
+        "title": "Legal — Privacy & Terms",
+        "content": "URL /privacy · /terms\nThe Privacy Policy and Terms of Service are linked from the footer of the landing page and are\navailable without signing in.\nEach page is dated “Last updated: December 2025” and provides a Back to Home link.\nA P P E N D I X\nAppendix — Status Reference\nThe following values appear throughout WaiverPro.\nWaiver application — types & statuses\nWaiver types\nApplication statuses\nPatient Needs Waiver (PNW), Program\nFlexibility (PF), Workforce Shortage Waiver\n(WSW)\nDraft, Submitted, Reopen, In Review, Evaluator Review,\nManager Review, Approved, Rejected, Revoked, Expired\nAction items\nStatus\nPriority\nDone, In Process\nHigh, Medium, Low\nSupport tickets\nStatus\nPriority\nOpen, In Progress, Resolved, Closed\nHigh, Medium, Low\nAnnouncements\nStatus\nMeaning\nActive\nCurrently in effect.\nUpcoming\nScheduled to take effect.\nExpired\nNo longer in effect.\n— End of document —\n",
+        "page": 25
+    }
+]

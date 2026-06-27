@@ -1,0 +1,52 @@
+{
+    "url": "https://white-cliff-0bca3ed00.1.azurestaticapps.net/dashboard/facilities",
+    "title": "Facilities",
+    "headings": [
+        "Facilities",
+        "Facilities Status Overview"
+    ],
+    "buttons": [
+        "+ New Application",
+        "All Facilities\n0",
+        "Due Soon\n0",
+        "No Status\n0",
+        "Overdue\n0",
+        "Role",
+        "Scheduled\n0",
+        "Take a Tour",
+        "Type",
+        "Upcoming\n0"
+    ],
+    "sidebar": [
+        "My Applications",
+        "Facilities",
+        "Action Items",
+        "User Management",
+        "Announcements",
+        "Settings",
+        "FAQs",
+        "Tickets",
+        "Contact"
+    ],
+    "search_boxes": [
+        "Search"
+    ],
+    "table_headers": [
+        "Name",
+        "Role",
+        "District",
+        "Type",
+        "License Number"
+    ],
+    "links": [
+        "Action Items",
+        "Announcements",
+        "Contact",
+        "FAQs",
+        "Facilities",
+        "My Applications",
+        "Settings",
+        "Tickets",
+        "User Management"
+    ]
+}

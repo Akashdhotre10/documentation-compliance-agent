@@ -1,0 +1,37 @@
+{
+    "url": "https://white-cliff-0bca3ed00.1.azurestaticapps.net/dashboard/tickets",
+    "title": "Support Tickets",
+    "headings": [
+        "Support Tickets"
+    ],
+    "buttons": [
+        "+ New Application",
+        "+ New Ticket",
+        "All",
+        "Take a Tour"
+    ],
+    "sidebar": [
+        "My Applications",
+        "Facilities",
+        "Action Items",
+        "User Management",
+        "Announcements",
+        "Settings",
+        "FAQs",
+        "Tickets",
+        "Contact"
+    ],
+    "search_boxes": [],
+    "table_headers": [],
+    "links": [
+        "Action Items",
+        "Announcements",
+        "Contact",
+        "FAQs",
+        "Facilities",
+        "My Applications",
+        "Settings",
+        "Tickets",
+        "User Management"
+    ]
+}

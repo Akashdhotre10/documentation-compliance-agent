@@ -1,0 +1,43 @@
+{
+    "url": "https://white-cliff-0bca3ed00.1.azurestaticapps.net/dashboard/settings",
+    "title": "Settings",
+    "headings": [
+        "Features",
+        "Notifications",
+        "Profile Information",
+        "Security",
+        "Settings"
+    ],
+    "buttons": [
+        "+ New Application",
+        "Change Password",
+        "Save Changes",
+        "Take a Tour"
+    ],
+    "sidebar": [
+        "My Applications",
+        "Facilities",
+        "Action Items",
+        "User Management",
+        "Announcements",
+        "Settings",
+        "FAQs",
+        "Tickets",
+        "Contact"
+    ],
+    "search_boxes": [
+        "At least 6 characters"
+    ],
+    "table_headers": [],
+    "links": [
+        "Action Items",
+        "Announcements",
+        "Contact",
+        "FAQs",
+        "Facilities",
+        "My Applications",
+        "Settings",
+        "Tickets",
+        "User Management"
+    ]
+}
