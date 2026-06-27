@@ -1,78 +1,104 @@
-import json
-
-
 class PromptBuilder:
 
     def build(self, documentation, ui):
 
-        prompt = f"""
-You are a Senior QA Automation Engineer.
+        return f"""
+You are a Senior Software QA Engineer performing documentation compliance verification.
 
-Your task is to compare a web page against its official documentation.
+Your task is to compare the extracted Website UI against the official documentation.
 
-IMPORTANT RULES
-
-1. Ignore:
-   - Sidebar navigation
-   - Header
-   - Footer
-   - Notifications
-   - User avatar
-   - Global navigation
-
-2. Compare ONLY:
-   - Page title
-   - Headings
-   - Buttons
-   - Search boxes
-   - Tables
-   - Table headers
-   - Filters
-   - Charts
-   - Forms
-
-3. Do NOT guess.
-
-4. If an element is present but named slightly differently,
-   consider it MATCHED.
-
-5. Compliance score must be an integer between 0 and 100.
-
-DOCUMENTATION
+--------------------------------------------------
+OFFICIAL DOCUMENTATION
+--------------------------------------------------
 
 {documentation}
 
----------------------------------------
+--------------------------------------------------
+LIVE WEBSITE UI
+--------------------------------------------------
 
-WEBSITE UI
+{ui}
 
-{json.dumps(ui, indent=4)}
+--------------------------------------------------
+IMPORTANT COMPARISON RULES
+--------------------------------------------------
 
----------------------------------------
+1. Compare ONLY features mentioned in the documentation.
 
+2. Ignore completely:
+- Sidebar navigation
+- User profile
+- Notification icons
+- Search boxes unless documentation explicitly mentions them
+- Dynamic counters (655, 788, etc.)
+- Pagination numbers
+- Badges
+- Tour buttons
+- Profile initials
+- Logged-in username
+
+3. Treat these as MATCHES:
+Facility == Facilities
+Application == Applications
+FAQ == FAQs
+User == Users
+Role == User Role
+Status Chip == Status Filter
+Waiver Type == Application Type
+
+4. Ignore:
+- Uppercase/lowercase
+- Singular/plural
+- Extra spaces
+- Minor wording differences
+
+5. If two elements clearly mean the same thing,
+count them as MATCHED.
+
+6. Do NOT invent missing elements.
+
+7. Only report something missing if the documentation
+explicitly describes it.
+
+8. Compliance Score Guidelines:
+
+100 = Perfect match
+
+90-99 = Almost identical
+
+75-89 = Minor differences
+
+50-74 = Several documented features missing
+
+Below 50 = Major mismatch
+
+--------------------------------------------------
 Return ONLY valid JSON.
-
-Do NOT explain your reasoning.
-
-Do NOT write paragraphs.
-
-Do NOT use markdown.
-
-Do NOT use ```json blocks.
-
-Output must start with {{
-
-Output must end with }}
-
-Return exactly this format:
+--------------------------------------------------
 
 {{
     "compliance_score": 0,
-    "matched": [],
-    "missing": [],
-    "extra": [],
-    "summary": ""
+    "matched": [
+        "..."
+    ],
+    "missing": [
+        "..."
+    ],
+    "extra": [
+        "..."
+    ],
+    "summary": "Short professional explanation."
 }}
-"""
 
-        return prompt
+IMPORTANT:
+
+Return ONLY JSON.
+
+Do NOT use markdown.
+
+Do NOT use ```json
+
+Do NOT explain your reasoning.
+
+Do NOT add any text before or after the JSON.
+"""

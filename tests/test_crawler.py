@@ -15,7 +15,13 @@ extractor = UIExtractor(page)
 
 for page_name in crawler.NAVIGATION:
 
-    crawler.visit(page_name)
+    success = crawler.visit(page_name)
+
+    if not success:
+
+        print(f"Skipping {page_name}")
+
+        continue
 
     data = extractor.extract()
 

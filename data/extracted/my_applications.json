@@ -2,39 +2,13 @@
     "url": "https://white-cliff-0bca3ed00.1.azurestaticapps.net/dashboard/my-applications",
     "title": "My Applications",
     "headings": [
-        "Applications Overview",
+        "My Applications",
         "Applications by Type",
-        "My Applications"
+        "Applications Overview"
     ],
     "buttons": [
         "+ New Application",
-        "All Applications\n789",
-        "All789",
-        "Approved 6",
-        "Draft 306",
-        "Evaluator Review 1",
-        "Expired 0",
-        "In Review 4",
-        "Manager Review 7",
-        "Patient Needs Waiver (PNW) Request616",
-        "Program Flexibility (PF) Request158",
-        "Rejected 0",
-        "Reopen 0",
-        "Revoked 0",
-        "Submitted 465",
-        "Take a Tour",
-        "Workforce Shortage Waiver (WSW) Request15"
-    ],
-    "sidebar": [
-        "My Applications",
-        "Facilities",
-        "Action Items",
-        "User Management",
-        "Announcements",
-        "Settings",
-        "FAQs",
-        "Tickets",
-        "Contact"
+        "Take a Tour"
     ],
     "search_boxes": [
         "Search"
@@ -47,15 +21,9 @@
         "Status",
         "Created on"
     ],
-    "links": [
-        "Action Items",
-        "Announcements",
-        "Contact",
-        "FAQs",
-        "Facilities",
-        "My Applications",
-        "Settings",
-        "Tickets",
-        "User Management"
-    ]
+    "forms": [
+        "Search"
+    ],
+    "tables": 1,
+    "charts": 32
 }

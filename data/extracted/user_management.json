@@ -6,41 +6,22 @@
     ],
     "buttons": [
         "+ New Application",
-        "Invite User",
-        "Member (0)",
-        "Pending Invites",
-        "Take a Tour"
-    ],
-    "sidebar": [
-        "My Applications",
-        "Facilities",
-        "Action Items",
-        "User Management",
-        "Announcements",
-        "Settings",
-        "FAQs",
-        "Tickets",
-        "Contact"
+        "Take a Tour",
+        "Invite User"
     ],
     "search_boxes": [
         "Search"
     ],
     "table_headers": [
         "Name",
-        "Role",
-        "District",
-        "Type",
-        "License Number"
+        "Email",
+        "Associated Facilities",
+        "Last Updated",
+        "Actions"
     ],
-    "links": [
-        "Action Items",
-        "Announcements",
-        "Contact",
-        "FAQs",
-        "Facilities",
-        "My Applications",
-        "Settings",
-        "Tickets",
-        "User Management"
-    ]
+    "forms": [
+        "Search"
+    ],
+    "tables": 1,
+    "charts": 27
 }

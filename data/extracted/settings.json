@@ -2,42 +2,37 @@
     "url": "https://white-cliff-0bca3ed00.1.azurestaticapps.net/dashboard/settings",
     "title": "Settings",
     "headings": [
-        "Features",
-        "Notifications",
+        "Settings",
+        "Partner Sample",
         "Profile Information",
+        "Notifications",
         "Security",
-        "Settings"
+        "Features"
     ],
     "buttons": [
         "+ New Application",
-        "Change Password",
+        "Take a Tour",
         "Save Changes",
-        "Take a Tour"
-    ],
-    "sidebar": [
-        "My Applications",
-        "Facilities",
-        "Action Items",
-        "User Management",
-        "Announcements",
-        "Settings",
-        "FAQs",
-        "Tickets",
-        "Contact"
+        "Change Password"
     ],
     "search_boxes": [
         "At least 6 characters"
     ],
     "table_headers": [],
-    "links": [
+    "forms": [
+        "First Name",
+        "Last Name",
+        "Email",
+        "Phone Number",
+        "Email Notifications",
+        "Status Updates",
         "Action Items",
-        "Announcements",
-        "Contact",
-        "FAQs",
-        "Facilities",
-        "My Applications",
-        "Settings",
-        "Tickets",
-        "User Management"
-    ]
+        "Current Password",
+        "New Password",
+        "Confirm New Password",
+        "Facilities Status Tracking",
+        "FAQ Assistant Chatbot"
+    ],
+    "tables": 0,
+    "charts": 12
 }

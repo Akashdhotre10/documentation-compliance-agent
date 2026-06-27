@@ -7,46 +7,23 @@
     ],
     "buttons": [
         "+ New Application",
-        "All Facilities\n0",
-        "Due Soon\n0",
-        "No Status\n0",
-        "Overdue\n0",
-        "Role",
-        "Scheduled\n0",
         "Take a Tour",
-        "Type",
-        "Upcoming\n0"
-    ],
-    "sidebar": [
-        "My Applications",
-        "Facilities",
-        "Action Items",
-        "User Management",
-        "Announcements",
-        "Settings",
-        "FAQs",
-        "Tickets",
-        "Contact"
+        "Role",
+        "Type"
     ],
     "search_boxes": [
         "Search"
     ],
     "table_headers": [
         "Name",
-        "Role",
-        "District",
         "Type",
-        "License Number"
+        "License Number",
+        "License Exp Date",
+        "Status"
     ],
-    "links": [
-        "Action Items",
-        "Announcements",
-        "Contact",
-        "FAQs",
-        "Facilities",
-        "My Applications",
-        "Settings",
-        "Tickets",
-        "User Management"
-    ]
+    "forms": [
+        "Search"
+    ],
+    "tables": 1,
+    "charts": 24
 }

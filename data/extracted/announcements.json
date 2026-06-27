@@ -2,36 +2,24 @@
     "url": "https://white-cliff-0bca3ed00.1.azurestaticapps.net/dashboard/announcements",
     "title": "Announcements",
     "headings": [
-        "Announcements"
+        "Announcements",
+        "Introducing Smarter Analytics",
+        "We’re Live! Welcome to Our New Website",
+        "Scheduled Maintainance",
+        "New Application is added",
+        "Scheduled Maintenance in Progress"
     ],
     "buttons": [
         "+ New Application",
         "Take a Tour"
     ],
-    "sidebar": [
-        "My Applications",
-        "Facilities",
-        "Action Items",
-        "User Management",
-        "Announcements",
-        "Settings",
-        "FAQs",
-        "Tickets",
-        "Contact"
-    ],
     "search_boxes": [
         "Search"
     ],
     "table_headers": [],
-    "links": [
-        "Action Items",
-        "Announcements",
-        "Contact",
-        "FAQs",
-        "Facilities",
-        "My Applications",
-        "Settings",
-        "Tickets",
-        "User Management"
-    ]
+    "forms": [
+        "Search"
+    ],
+    "tables": 0,
+    "charts": 18
 }

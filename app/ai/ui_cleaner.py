@@ -1,25 +1,40 @@
+import re
+
+
 class UICleaner:
-    """
-    Removes global navigation and unnecessary
-    UI elements before sending data to the AI.
-    """
 
     def clean(self, ui):
 
         cleaned = {}
 
-        cleaned["title"] = ui.get("title", "")
+        for key, values in ui.items():
 
-        cleaned["headings"] = ui.get("headings", [])
+            if not isinstance(values, list):
+                cleaned[key] = values
+                continue
 
-        cleaned["buttons"] = ui.get("buttons", [])
+            new_values = []
 
-        cleaned["table_headers"] = ui.get("table_headers", [])
+            for item in values:
 
-        cleaned["search_boxes"] = ui.get("search_boxes", [])
+                if not item:
+                    continue
 
-        # Ignore these because they appear on every page
-        # and are not page-specific.
-        # sidebar, links, url are intentionally excluded.
+                item = str(item)
+
+                # Remove numbers
+                item = re.sub(r"\d+", "", item)
+
+                # Remove extra spaces
+                item = re.sub(r"\s+", " ", item)
+
+                item = item.strip()
+
+                if len(item) < 2:
+                    continue
+
+                new_values.append(item)
+
+            cleaned[key] = sorted(set(new_values))
 
         return cleaned

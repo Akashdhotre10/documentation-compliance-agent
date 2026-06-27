@@ -47,12 +47,7 @@ st.write(
     """
 Automatically compare a software documentation PDF with the live website.
 
-### Tech Stack
-- 📄 PDF Parser
-- 🌐 Playwright Automation
-- 🤖 Groq LLM
-- 📊 HTML Compliance Reports
-- ⚡ Streamlit Dashboard
+
 """
 )
 

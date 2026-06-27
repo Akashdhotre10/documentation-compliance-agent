@@ -3,41 +3,31 @@
     "title": "Contact",
     "headings": [
         "Contact",
+        "Send us a message",
         "Contact Information",
-        "Quick Response",
-        "Send us a message"
+        "Quick Response"
     ],
     "buttons": [
         "+ New Application",
-        "Send Message",
-        "Take a Tour"
-    ],
-    "sidebar": [
-        "My Applications",
-        "Facilities",
-        "Action Items",
-        "User Management",
-        "Announcements",
-        "Settings",
-        "FAQs",
-        "Tickets",
-        "Contact"
+        "Take a Tour",
+        "Send Message"
     ],
     "search_boxes": [
-        "How can we help?",
         "Your name",
-        "your@email.com"
+        "your@email.com",
+        "How can we help?"
     ],
     "table_headers": [],
-    "links": [
-        "Action Items",
-        "Announcements",
-        "Contact",
-        "FAQs",
-        "Facilities",
-        "My Applications",
-        "Settings",
-        "Tickets",
-        "User Management"
-    ]
+    "forms": [
+        "Name",
+        "Your name",
+        "Email",
+        "your@email.com",
+        "Subject",
+        "How can we help?",
+        "Message",
+        "Tell us more about your inquiry..."
+    ],
+    "tables": 0,
+    "charts": 16
 }

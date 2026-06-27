@@ -28,6 +28,8 @@ class WebsiteCrawler:
                 self.NAVIGATION[page_name]
             ).click()
 
+            self.page.wait_for_timeout(2000)
+
             self.page.wait_for_load_state("networkidle")
 
             print("[OK] Opened")
@@ -38,6 +40,6 @@ class WebsiteCrawler:
 
         except TimeoutError:
 
-            print(f"[Failed] to open {page_name}")
+            print(f"[FAILED] Could not open {page_name}")
 
             return False

@@ -2,36 +2,31 @@
     "url": "https://white-cliff-0bca3ed00.1.azurestaticapps.net/dashboard/tickets",
     "title": "Support Tickets",
     "headings": [
-        "Support Tickets"
+        "Support Tickets",
+        "TEST ISSUE",
+        "DMV DEMO TICKET",
+        "TEST",
+        "I can't login - need password reset",
+        "Test",
+        "zsxdfcvg",
+        "zxecrv",
+        "testing support ticke submission",
+        "testing support ticket submission",
+        "My script is not showing correctly",
+        "Login issue",
+        "Waiver Application Submission Failure",
+        "Login Issue – Unable to Access Waiver Pro Portal"
     ],
     "buttons": [
         "+ New Application",
+        "Take a Tour",
         "+ New Ticket",
         "All",
-        "Take a Tour"
-    ],
-    "sidebar": [
-        "My Applications",
-        "Facilities",
-        "Action Items",
-        "User Management",
-        "Announcements",
-        "Settings",
-        "FAQs",
-        "Tickets",
-        "Contact"
+        "View Details"
     ],
     "search_boxes": [],
     "table_headers": [],
-    "links": [
-        "Action Items",
-        "Announcements",
-        "Contact",
-        "FAQs",
-        "Facilities",
-        "My Applications",
-        "Settings",
-        "Tickets",
-        "User Management"
-    ]
+    "forms": [],
+    "tables": 0,
+    "charts": 68
 }

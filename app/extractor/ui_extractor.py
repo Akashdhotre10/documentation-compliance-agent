@@ -1,149 +1,313 @@
 import json
 import os
+import re
 
 
 class UIExtractor:
     """
-    Extracts structured UI information from a page
-    and saves it as JSON.
+   Extract visible UI components from the current page.
+   The output is optimized for AI compliance comparison.
     """
 
     def __init__(self, page):
         self.page = page
 
+    # -------------------------------------------------
+
+    def clean_text(self, text):
+
+        if not text:
+            return ""
+
+        text = text.strip()
+
+        # collapse spaces
+        text = re.sub(r"\s+", " ", text)
+
+        return text
+
+    # -------------------------------------------------
+
+    def valid_text(self, text):
+
+        text = self.clean_text(text)
+
+        if text == "":
+            return False
+
+        # Ignore numbers
+        if text.isdigit():
+            return False
+
+        # Ignore counters like All788
+        if re.search(r"\d", text):
+            return False
+
+        # Ignore initials
+        if len(text) <= 2:
+            return False
+
+        return True
+
+    # -------------------------------------------------
+
     def extract(self):
+
+        # Give React time to finish rendering
+        self.page.wait_for_timeout(1500)
 
         data = {}
 
-      
         data["url"] = self.page.url
 
+        # =====================================================
+        # PAGE TITLE
+        # =====================================================
+
+        title = ""
 
         try:
-            data["title"] = (
-                self.page.locator("h1")
-                .first
-                .inner_text()
-                .strip()
-            )
+
+            h1 = self.page.locator("h1")
+
+            if h1.count() > 0:
+
+                title = self.clean_text(
+                    h1.first.inner_text()
+                )
+
         except Exception:
-            data["title"] = ""
+            pass
+
+        if not title:
+
+            try:
+                title = self.page.title()
+
+            except Exception:
+                title = ""
+
+        data["title"] = title
+
+        print("\nDetected Title :", title)
+        print("Current URL    :", self.page.url)
+
+        # =====================================================
+        # HEADINGS
+        # =====================================================
 
         headings = []
 
         try:
-            for heading in self.page.locator("h1, h2, h3").all():
 
-                text = heading.inner_text().strip()
+            locator = self.page.locator("h1,h2,h3")
 
-                if text:
-                    headings.append(text)
+            for i in range(locator.count()):
+
+                text = self.clean_text(
+                    locator.nth(i).inner_text()
+                )
+
+                if self.valid_text(text):
+
+                    if text not in headings:
+
+                        headings.append(text)
 
         except Exception:
             pass
 
-        data["headings"] = sorted(set(headings))
+        data["headings"] = headings
 
-      
+        # =====================================================
+        # BUTTONS
+        # =====================================================
+
         buttons = []
 
         try:
 
-            for button in self.page.locator("button").all():
+            locator = self.page.locator("button")
 
-                text = button.inner_text().strip()
+            for i in range(locator.count()):
 
-                if not text:
+                text = self.clean_text(
+                    locator.nth(i).inner_text()
+                )
+
+                if not self.valid_text(text):
                     continue
 
-                # Ignore pure numbers
-                if text.isdigit():
+                # Ignore navigation buttons
+
+                ignore = [
+
+                    "Dashboard",
+                    "Home",
+                    "Logout",
+                    "Profile"
+
+                ]
+
+                if text in ignore:
                     continue
 
-                # Ignore initials like AD
-                if len(text) <= 2 and text.isupper():
-                    continue
-
-                buttons.append(text)
+                if text not in buttons:
+                    buttons.append(text)
 
         except Exception:
             pass
 
-        data["buttons"] = sorted(set(buttons))
+        data["buttons"] = buttons
 
-       
-        sidebar = []
+        # =====================================================
+        # SEARCH BOXES
+        # =====================================================
 
-        try:
-
-            nav_items = self.page.locator("[data-testid^='nav-']").all()
-
-            for item in nav_items:
-
-                text = item.inner_text().strip()
-
-                if text:
-                    sidebar.append(text)
-
-        except Exception:
-            pass
-
-        data["sidebar"] = sidebar
-
-     
-        search_boxes = []
+        search = []
 
         try:
 
-            for inp in self.page.locator("input").all():
+            locator = self.page.locator("input")
 
-                placeholder = inp.get_attribute("placeholder")
+            for i in range(locator.count()):
+
+                placeholder = locator.nth(i).get_attribute(
+                    "placeholder"
+                )
+
+                placeholder = self.clean_text(
+                    placeholder or ""
+                )
 
                 if placeholder:
-                    search_boxes.append(placeholder)
+
+                    if placeholder not in search:
+
+                        search.append(placeholder)
 
         except Exception:
             pass
 
-        data["search_boxes"] = sorted(set(search_boxes))
+        data["search_boxes"] = search
 
-      
-        table_headers = []
+        # =====================================================
+        # TABLE HEADERS
+        # =====================================================
+
+        headers = []
 
         try:
 
-            for th in self.page.locator("th").all():
+            locator = self.page.locator("th")
 
-                text = th.inner_text().strip()
+            for i in range(locator.count()):
 
-                if text:
-                    table_headers.append(text)
+                text = self.clean_text(
+                    locator.nth(i).inner_text()
+                )
+
+                if self.valid_text(text):
+
+                    if text not in headers:
+
+                        headers.append(text)
 
         except Exception:
             pass
 
-        data["table_headers"] = table_headers
+        data["table_headers"] = headers
 
-      
-        links = []
+        # =====================================================
+        # FORMS
+        # =====================================================
+
+        forms = []
 
         try:
 
-            for link in self.page.locator("a").all():
+            locator = self.page.locator(
+                "label,input,textarea,select"
+            )
 
-                text = link.inner_text().strip()
+            for i in range(locator.count()):
 
-                if text:
-                    links.append(text)
+                item = locator.nth(i)
+
+                text = ""
+
+                try:
+                    text = item.inner_text()
+                except:
+                    pass
+
+                if not text:
+                    text = item.get_attribute("placeholder")
+
+                if not text:
+                    text = item.get_attribute("name")
+
+                text = self.clean_text(text or "")
+
+                if self.valid_text(text):
+
+                    if text not in forms:
+
+                        forms.append(text)
 
         except Exception:
             pass
 
-        data["links"] = sorted(set(links))
+        data["forms"] = forms
+
+        # =====================================================
+        # TABLES PRESENT?
+        # =====================================================
+
+        try:
+
+            data["tables"] = self.page.locator("table").count()
+
+        except Exception:
+
+            data["tables"] = 0
+
+        # =====================================================
+        # CHARTS PRESENT?
+        # =====================================================
+
+        try:
+
+            charts = self.page.locator(
+                "canvas,svg,.recharts-wrapper"
+            ).count()
+
+            data["charts"] = charts
+
+        except Exception:
+
+            data["charts"] = 0
+
+        # =====================================================
+        # DEBUG
+        # =====================================================
+
+        print("\n----------- UI SUMMARY -----------")
+
+        print("Title :", data["title"])
+        print("Headings :", len(data["headings"]))
+        print("Buttons :", len(data["buttons"]))
+        print("Search :", len(data["search_boxes"]))
+        print("Table Headers :", len(data["table_headers"]))
+        print("Forms :", len(data["forms"]))
+        print("Tables :", data["tables"])
+        print("Charts :", data["charts"])
+
+        print("----------------------------------")
 
         return data
 
-
+    # -------------------------------------------------
 
     def save(self, filename, data):
 
@@ -155,13 +319,13 @@ class UIExtractor:
             f"{filename}.json"
         )
 
-        with open(filepath, "w", encoding="utf-8") as file:
+        with open(filepath, "w", encoding="utf-8") as f:
 
             json.dump(
                 data,
-                file,
+                f,
                 indent=4,
                 ensure_ascii=False
             )
 
-        print(f" Saved: {filepath}")
+        print(f"\nSaved : {filepath}")

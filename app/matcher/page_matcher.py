@@ -1,5 +1,7 @@
 import json
 
+from app.matcher.semantic_matcher import SemanticMatcher
+
 
 class PageMatcher:
 
@@ -12,61 +14,24 @@ class PageMatcher:
 
             self.guidelines = json.load(file)
 
+        self.semantic = SemanticMatcher(
+            self.guidelines
+        )
+
     def get_page(self, page_title):
 
-        page_title = page_title.lower().strip()
+        page, score = self.semantic.find_best_match(
+            page_title
+        )
 
-        # ---------- Direct Match ----------
-        for page in self.guidelines:
+        print("\n---------------------------")
+        print("Semantic Page Match")
+        print("---------------------------")
+        print("Website Page :", page_title)
+        print("Matched Doc  :", page["title"])
+        print("Confidence   :", score)
+        print("---------------------------\n")
 
-            title = page["title"].lower()
-
-            if page_title == title:
-                return page
-
-            if page_title in title:
-                return page
-
-        # ---------- Support Pages ----------
-        if page_title in ["faqs", "tickets", "contact"]:
-
-            for page in self.guidelines:
-
-                title = page["title"].lower()
-
-                if "support" in title:
-                    return page
-
-        # ---------- User Management ----------
-        if page_title == "user management":
-
-            for page in self.guidelines:
-
-                if "user management" in page["title"].lower():
-                    return page
-
-        # ---------- Action Items ----------
-        if page_title == "action items":
-
-            for page in self.guidelines:
-
-                if "action items" in page["title"].lower():
-                    return page
-
-        # ---------- Announcements ----------
-        if page_title == "announcements":
-
-            for page in self.guidelines:
-
-                if "announcements" in page["title"].lower():
-                    return page
-
-        # ---------- Settings ----------
-        if page_title == "settings":
-
-            for page in self.guidelines:
-
-                if "settings" in page["title"].lower():
-                    return page
-
+        if page is not None:
+            return page
         return None

@@ -6,40 +6,22 @@
     ],
     "buttons": [
         "+ New Application",
-        "Priority",
+        "Take a Tour",
         "Status",
-        "Take a Tour"
-    ],
-    "sidebar": [
-        "My Applications",
-        "Facilities",
-        "Action Items",
-        "User Management",
-        "Announcements",
-        "Settings",
-        "FAQs",
-        "Tickets",
-        "Contact"
+        "Priority"
     ],
     "search_boxes": [
         "Search"
     ],
     "table_headers": [
-        "ID",
         "Name",
         "Status",
         "Priority",
         "Due Date"
     ],
-    "links": [
-        "Action Items",
-        "Announcements",
-        "Contact",
-        "FAQs",
-        "Facilities",
-        "My Applications",
-        "Settings",
-        "Tickets",
-        "User Management"
-    ]
+    "forms": [
+        "Search"
+    ],
+    "tables": 1,
+    "charts": 54
 }

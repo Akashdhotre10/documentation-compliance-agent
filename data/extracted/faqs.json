@@ -2,50 +2,31 @@
     "url": "https://white-cliff-0bca3ed00.1.azurestaticapps.net/dashboard/faqs",
     "title": "FAQs",
     "headings": [
-        "Can I edit an application after submission?",
         "FAQs",
-        "How can I track the status of my application?",
-        "How do I add or manage facilities?",
-        "How do I contact support?",
         "How do I submit a new waiver application?",
         "What is the typical review time for waiver applications?",
+        "How can I track the status of my application?",
+        "What types of waivers can I apply for?",
+        "Can I edit an application after submission?",
+        "How do I add or manage facilities?",
         "What should I do if my application is rejected?",
-        "What types of waivers can I apply for?"
+        "How do I contact support?"
     ],
     "buttons": [
         "+ New Application",
-        "Can I edit an application after submission?",
-        "How can I track the status of my application?",
-        "How do I add or manage facilities?",
-        "How do I contact support?",
-        "How do I submit a new waiver application?",
         "Take a Tour",
+        "How do I submit a new waiver application?",
         "What is the typical review time for waiver applications?",
+        "How can I track the status of my application?",
+        "What types of waivers can I apply for?",
+        "Can I edit an application after submission?",
+        "How do I add or manage facilities?",
         "What should I do if my application is rejected?",
-        "What types of waivers can I apply for?"
-    ],
-    "sidebar": [
-        "My Applications",
-        "Facilities",
-        "Action Items",
-        "User Management",
-        "Announcements",
-        "Settings",
-        "FAQs",
-        "Tickets",
-        "Contact"
+        "How do I contact support?"
     ],
     "search_boxes": [],
     "table_headers": [],
-    "links": [
-        "Action Items",
-        "Announcements",
-        "Contact",
-        "FAQs",
-        "Facilities",
-        "My Applications",
-        "Settings",
-        "Tickets",
-        "User Management"
-    ]
+    "forms": [],
+    "tables": 0,
+    "charts": 20
 }
