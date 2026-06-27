@@ -3,15 +3,25 @@
     "title": "Announcements",
     "headings": [
         "Announcements",
+        "Introducing Smarter Analytics Expired Medium 20.01.2026",
         "Introducing Smarter Analytics",
+        "We’re Live! Welcome to Our New Website Expired Low 20.01.2026",
         "We’re Live! Welcome to Our New Website",
+        "Scheduled Maintainance Expired High 14.01.2026",
         "Scheduled Maintainance",
+        "New Application is added Expired Medium 14.01.2026",
         "New Application is added",
+        "Scheduled Maintenance in Progress Expired High 20.01.2026",
         "Scheduled Maintenance in Progress"
     ],
     "buttons": [
         "+ New Application",
-        "Take a Tour"
+        "Take a Tour",
+        "Introducing Smarter Analytics Expired Medium 20.01.2026",
+        "We’re Live! Welcome to Our New Website Expired Low 20.01.2026",
+        "Scheduled Maintainance Expired High 14.01.2026",
+        "New Application is added Expired Medium 14.01.2026",
+        "Scheduled Maintenance in Progress Expired High 20.01.2026"
     ],
     "search_boxes": [
         "Search"

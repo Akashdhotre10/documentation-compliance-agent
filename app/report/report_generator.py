@@ -17,6 +17,39 @@ class ReportGenerator:
 
         score = result["compliance_score"]
 
+        # ---------------------------------------
+        # Statistics
+        # ---------------------------------------
+
+        matched_count = len(result.get("matched", []))
+        missing_count = len(result.get("missing", []))
+        extra_count = len(result.get("extra", []))
+
+        issues = result.get("issues", [])
+
+        # Backward compatibility
+        if not issues:
+
+            for item in result.get("missing", []):
+
+                issues.append({
+
+                    "component": item,
+
+                    "expected": item,
+
+                    "actual": "Not Found",
+
+                    "severity": "Medium",
+
+                    "confidence": 0.90,
+
+                    "guideline_reference": "Documentation",
+
+                    "reason": result.get("summary", "")
+
+                })
+
         if score >= 90:
             color = "#2ecc71"
             status = "PASS"
@@ -30,165 +63,183 @@ class ReportGenerator:
             status = "FAIL"
 
         html = f"""
-
 <!DOCTYPE html>
-
 <html>
-
 <head>
-
 <title>Compliance Report</title>
-
 <style>
-
-body{{
-background:#eef2f7;
-font-family:Arial;
-padding:40px;
+body {{
+    background: #eef2f7;
+    font-family: Arial;
+    padding: 40px;
 }}
 
-.container{{
-background:white;
-max-width:1100px;
-margin:auto;
-padding:40px;
-border-radius:12px;
-box-shadow:0 0 20px rgba(0,0,0,.15);
+.container {{
+    background: white;
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,.15);
 }}
 
-.header{{
-text-align:center;
-margin-bottom:30px;
+.header {{
+    text-align: center;
+    margin-bottom: 30px;
 }}
 
-.score{{
-font-size:60px;
-font-weight:bold;
-color:{color};
+.score {{
+    font-size: 60px;
+    font-weight: bold;
+    color: {color};
 }}
 
-.bar{{
-font-size:28px;
-margin-bottom:20px;
+.bar {{
+    font-size: 28px;
+    margin-bottom: 20px;
 }}
 
-.card{{
-background:#fafafa;
-padding:20px;
-margin-top:20px;
-border-radius:10px;
-border-left:6px solid {color};
+.card {{
+    background: #fafafa;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border-left: 6px solid {color};
 }}
 
-li{{
-padding:8px;
+li {{
+    padding: 8px;
 }}
 
-.footer{{
-margin-top:40px;
-text-align:center;
-color:gray;
+.footer {{
+    margin-top: 40px;
+    text-align: center;
+    color: gray;
 }}
 
+table {{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}}
+
+th {{
+    background: #3498db;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}}
+
+td {{
+    padding: 10px;
+    border: 1px solid #ddd;
+}}
+
+tr:nth-child(even) {{
+    background: #f8f8f8;
+}}
+
+.stats {{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}}
+
+.stat-card {{
+    background: #f7f7f7;
+    padding: 15px;
+    border-radius: 10px;
+    width: 22%;
+    text-align: center;
+    box-shadow: 0 0 6px rgba(0,0,0,.08);
+}}
 </style>
-
 </head>
-
 <body>
-
 <div class="container">
-
 <div class="header">
-
 <h1>AI Documentation Compliance Report</h1>
-
-<p><b>Generated:</b>
-{datetime.now().strftime("%d %B %Y %H:%M")}</p>
-
+<p><b>Generated:</b> {datetime.now().strftime("%d %B %Y %H:%M")}</p>
 </div>
-
 <div class="score">
-
 {score}%
-
 </div>
-
 <div class="bar">
-
 {self.progress_bar(score)}
-
 </div>
-
-<h2>Status : {status}</h2>
-
+<h2>Status: {status}</h2>
 <hr>
-
+<div class="stats">
+<div class="stat-card">
+<h3>Matched</h3>
+<h2>{matched_count}</h2>
+</div>
+<div class="stat-card">
+<h3>Missing</h3>
+<h2>{missing_count}</h2>
+</div>
+<div class="stat-card">
+<h3>Extra</h3>
+<h2>{extra_count}</h2>
+</div>
+<div class="stat-card">
+<h3>Compliance</h3>
+<h2>{score}%</h2>
+</div>
+</div>
 <h2>Page</h2>
-
 <p>{page_name}</p>
-
 <div class="card">
-
 <h2>Matched Elements</h2>
-
 <ul>
-
 {"".join(f"<li>✅ {i}</li>" for i in result["matched"])}
-
 </ul>
-
 </div>
-
 <div class="card">
-
 <h2>Missing Elements</h2>
-
 <ul>
-
 {"".join(f"<li>❌ {i}</li>" for i in result["missing"])}
-
 </ul>
-
 </div>
-
 <div class="card">
-
 <h2>Extra Elements</h2>
-
 <ul>
-
 {"".join(f"<li>⚠ {i}</li>" for i in result["extra"])}
-
 </ul>
-
 </div>
-
 <div class="card">
-
+<h2>Detailed Discrepancy Report</h2>
+<table>
+<tr>
+<th>Component</th>
+<th>Expected</th>
+<th>Actual</th>
+<th>Severity</th>
+<th>Confidence</th>
+</tr>
+{"".join(f"<tr><td>{issue['component']}</td><td>{issue['expected']}</td><td>{issue['actual']}</td><td>{issue['severity']}</td><td>{round(issue['confidence']*100)}%</td></tr>" for issue in issues)}
+</table>
+</div>
+<div class="card">
 <h2>AI Recommendation</h2>
-
 <p>
-
-{result["summary"]}
-
+{result.get("summary", "No summary available")}
 </p>
-
 </div>
-
+<div class="card">
+<h2>Evidence</h2>
+<p>
+Screenshot support will be added in the next milestone.
+</p>
+</div>
 <div class="footer">
-
 Generated by
-
 <h3>AI Documentation Compliance Agent</h3>
-
 </div>
-
 </div>
-
 </body>
-
 </html>
-
 """
 
         filename = reports / f"{page_name.lower().replace(' ','_')}.html"

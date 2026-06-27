@@ -3,102 +3,105 @@ class PromptBuilder:
     def build(self, documentation, ui):
 
         return f"""
-You are a Senior Software QA Engineer performing documentation compliance verification.
+You are a Senior Software QA Engineer performing Documentation Compliance Verification.
 
-Your task is to compare the extracted Website UI against the official documentation.
+Your task is to compare the LIVE WEBSITE UI with the OFFICIAL DOCUMENTATION.
 
---------------------------------------------------
+====================================================
 OFFICIAL DOCUMENTATION
---------------------------------------------------
+====================================================
 
 {documentation}
 
---------------------------------------------------
+====================================================
 LIVE WEBSITE UI
---------------------------------------------------
+====================================================
 
 {ui}
 
---------------------------------------------------
-IMPORTANT COMPARISON RULES
---------------------------------------------------
+====================================================
+RULES
+====================================================
 
-1. Compare ONLY features mentioned in the documentation.
+1. Compare ONLY documented features.
 
-2. Ignore completely:
+2. Ignore:
 - Sidebar navigation
 - User profile
 - Notification icons
-- Search boxes unless documentation explicitly mentions them
-- Dynamic counters (655, 788, etc.)
-- Pagination numbers
-- Badges
+- Dynamic counters
+- Pagination
 - Tour buttons
+- Logged-in usernames
 - Profile initials
-- Logged-in username
 
-3. Treat these as MATCHES:
-Facility == Facilities
-Application == Applications
-FAQ == FAQs
-User == Users
-Role == User Role
-Status Chip == Status Filter
-Waiver Type == Application Type
+3. Treat these as equivalent:
+
+Facility = Facilities
+Application = Applications
+FAQ = FAQs
+Role = User Role
+Status Chip = Status Filter
+Waiver Type = Application Type
 
 4. Ignore:
-- Uppercase/lowercase
+- Upper/lower case
 - Singular/plural
-- Extra spaces
 - Minor wording differences
 
-5. If two elements clearly mean the same thing,
-count them as MATCHED.
+5. Never invent missing features.
 
-6. Do NOT invent missing elements.
+6. Only report something as missing if documentation explicitly requires it.
 
-7. Only report something missing if the documentation
-explicitly describes it.
+7. Compliance Score
 
-8. Compliance Score Guidelines:
+100 = Perfect Match
 
-100 = Perfect match
+90-99 = Minor wording differences
 
-90-99 = Almost identical
+75-89 = Small documented differences
 
-75-89 = Minor differences
-
-50-74 = Several documented features missing
+50-74 = Several missing documented features
 
 Below 50 = Major mismatch
 
---------------------------------------------------
+====================================================
+OUTPUT FORMAT
+====================================================
+
 Return ONLY valid JSON.
---------------------------------------------------
 
 {{
     "compliance_score": 0,
-    "matched": [
-        "..."
+
+    "matched": [],
+
+    "missing": [],
+
+    "extra": [],
+
+    "issues": [
+        {{
+            "component": "",
+            "expected": "",
+            "actual": "",
+            "severity": "Low | Medium | High",
+            "confidence": 0.95,
+            "guideline_reference": "",
+            "reason": ""
+        }}
     ],
-    "missing": [
-        "..."
-    ],
-    "extra": [
-        "..."
-    ],
-    "summary": "Short professional explanation."
+
+    "summary": ""
 }}
 
-IMPORTANT:
+IMPORTANT
 
 Return ONLY JSON.
 
+Do NOT explain anything.
+
 Do NOT use markdown.
 
-Do NOT use ```json
-
-Do NOT explain your reasoning.
-
-Do NOT add any text before or after the JSON.
+Do NOT wrap JSON in ```json.
 """

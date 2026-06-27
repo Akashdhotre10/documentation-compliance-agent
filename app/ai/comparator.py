@@ -134,8 +134,8 @@ class Comparator:
         # --------------------------
 
         documentation_text = self.section.extract(
-        documentation["content"],
-        ui["title"]
+            documentation["content"],
+            ui["title"]
         )
 
         print("\n" + "=" * 70)
@@ -149,8 +149,8 @@ class Comparator:
         print("=" * 70)
 
         prompt = self.prompt.build(
-        documentation_text,
-        cleaned
+            documentation_text,
+            cleaned
         )
 
         # --------------------------
@@ -176,9 +176,9 @@ class Comparator:
 
         validated = self.validator.validate(result)
 
-        # --------------------------
-        # Fallback if AI fails
-        # --------------------------
+        # -------------------------------------------------------
+        # Fallback if AI returns invalid JSON
+        # -------------------------------------------------------
 
         if validated["compliance_score"] == 0:
 
@@ -194,7 +194,33 @@ class Comparator:
                 "matched": matched,
                 "missing": missing,
                 "extra": extra,
-                "summary": "Compliance generated using deterministic fuzzy matching because the AI response was invalid."
+                "issues": [],
+                "summary": (
+                    "Compliance generated using deterministic fuzzy "
+                    "matching because the AI response was invalid."
+                )
             }
+
+        # -------------------------------------------------------
+        # Automatically generate issues if AI didn't provide them
+        # -------------------------------------------------------
+
+        if not validated.get("issues"):
+
+            issues = []
+
+            for item in validated.get("missing", []):
+
+                issues.append({
+                    "component": item,
+                    "expected": item,
+                    "actual": "Not Found",
+                    "severity": "Medium",
+                    "confidence": 0.90,
+                    "guideline_reference": "Documentation",
+                    "reason": "Required by documentation but not detected in the UI."
+                })
+
+            validated["issues"] = issues
 
         return validated

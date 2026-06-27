@@ -8,7 +8,22 @@
     ],
     "buttons": [
         "+ New Application",
-        "Take a Tour"
+        "Take a Tour",
+        "All805",
+        "Patient Needs Waiver (PNW) Request630",
+        "Program Flexibility (PF) Request160",
+        "Workforce Shortage Waiver (WSW) Request15",
+        "All Applications 805",
+        "Draft 306",
+        "Submitted 481",
+        "Reopen 0",
+        "In Review 4",
+        "Rejected 0",
+        "Approved 6",
+        "Evaluator Review 1",
+        "Manager Review 7",
+        "Revoked 0",
+        "Expired 0"
     ],
     "search_boxes": [
         "Search"

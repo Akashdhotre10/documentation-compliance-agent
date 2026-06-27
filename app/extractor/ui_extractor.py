@@ -5,8 +5,8 @@ import re
 
 class UIExtractor:
     """
-   Extract visible UI components from the current page.
-   The output is optimized for AI compliance comparison.
+    Extract visible UI components from the current page.
+    The output is optimized for AI compliance comparison.
     """
 
     def __init__(self, page):
@@ -29,22 +29,37 @@ class UIExtractor:
     # -------------------------------------------------
 
     def valid_text(self, text):
+        """
+        Decide whether extracted text is meaningful for
+        documentation comparison.
+        """
 
         text = self.clean_text(text)
 
-        if text == "":
+        if not text:
             return False
 
-        # Ignore numbers
+        # Ignore only pure numbers
         if text.isdigit():
             return False
 
-        # Ignore counters like All788
-        if re.search(r"\d", text):
+        # Ignore very short text
+        if len(text) <= 2:
             return False
 
-        # Ignore initials
-        if len(text) <= 2:
+        # Ignore common UI noise
+        ignore = {
+            "...",
+            "|",
+            "-",
+            "--",
+            ">>",
+            "<<",
+            ">",
+            "<"
+        }
+
+        if text in ignore:
             return False
 
         return True
