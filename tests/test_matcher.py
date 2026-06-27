@@ -2,6 +2,23 @@ from app.matcher.page_matcher import PageMatcher
 
 matcher = PageMatcher()
 
-page = matcher.get_page("My Applications")
+pages = [
+    "My Applications",
+    "Facilities",
+    "Action Items",
+    "User Management",
+    "Announcements",
+    "Settings",
+    "FAQs",
+    "Tickets",
+    "Contact"
+]
 
-print(page)
+for page in pages:
+    print("\n---------------------")
+    print(page)
+    print("---------------------")
+
+    result = matcher.match(page)
+
+    print(result)
