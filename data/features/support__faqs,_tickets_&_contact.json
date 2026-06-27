@@ -1,0 +1,27 @@
+{
+    "title": "Support — FAQs, Tickets & Contact",
+    "buttons": [
+        "+ New Ticket",
+        "Create Ticket",
+        "View Details"
+    ],
+    "filters": [
+        "Status",
+        "Priority"
+    ],
+    "forms": [
+        "message form",
+        "Create New Support Ticket panel"
+    ],
+    "table_columns": [],
+    "tabs": [],
+    "cards": [
+        "tickets as cards"
+    ],
+    "charts": [],
+    "search_boxes": [],
+    "headings": [
+        "Support Tickets — Track and manage your support tickets.",
+        "Get in touch with our support team"
+    ]
+}

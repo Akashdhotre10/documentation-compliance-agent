@@ -1,0 +1,24 @@
+{
+    "title": "Settings",
+    "buttons": [
+        "Save Changes",
+        "Change Password"
+    ],
+    "filters": [],
+    "forms": [
+        "Profile Information",
+        "Security"
+    ],
+    "table_columns": [],
+    "tabs": [],
+    "cards": [
+        "Organisation",
+        "Profile Information",
+        "Notifications",
+        "Security",
+        "Features"
+    ],
+    "charts": [],
+    "search_boxes": [],
+    "headings": []
+}

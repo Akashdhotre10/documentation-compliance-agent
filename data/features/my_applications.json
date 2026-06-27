@@ -1,0 +1,30 @@
+{
+    "title": "My Applications",
+    "buttons": [],
+    "filters": [
+        "Waiver-type",
+        "Status"
+    ],
+    "forms": [],
+    "table_columns": [
+        "Waiver ID",
+        "Name",
+        "Facility",
+        "Type",
+        "Status",
+        "Created on"
+    ],
+    "tabs": [
+        "All",
+        "Patient Needs Waiver (PNW) Request",
+        "Program Flexibility (PF) Request",
+        "Workforce Shortage Waiver (WSW) Request"
+    ],
+    "cards": [],
+    "charts": [
+        "Applications by Type",
+        "Applications Overview"
+    ],
+    "search_boxes": [],
+    "headings": []
+}

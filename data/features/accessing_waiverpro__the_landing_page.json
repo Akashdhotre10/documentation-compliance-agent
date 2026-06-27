@@ -1,0 +1,22 @@
+{
+    "title": "Healthcare Waiver Management",
+    "buttons": [
+        "Getting Started"
+    ],
+    "filters": [
+        "All Waiver Programs"
+    ],
+    "forms": [],
+    "table_columns": [],
+    "tabs": [],
+    "cards": [
+        "program card"
+    ],
+    "charts": [],
+    "search_boxes": [
+        "Search waivers"
+    ],
+    "headings": [
+        "Healthcare Waiver Management"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "title": "The Application Workspace & Navigation",
+    "buttons": [
+        "+ New Application",
+        "Logout"
+    ],
+    "filters": [],
+    "forms": [],
+    "table_columns": [],
+    "tabs": [],
+    "cards": [],
+    "charts": [],
+    "search_boxes": [
+        "Search"
+    ],
+    "headings": [
+        "Support"
+    ]
+}

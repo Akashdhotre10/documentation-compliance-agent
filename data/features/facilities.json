@@ -1,0 +1,29 @@
+{
+    "title": "Facilities",
+    "buttons": [],
+    "filters": [
+        "All Facilities",
+        "Due Soon",
+        "Upcoming",
+        "Scheduled",
+        "Overdue",
+        "No Status",
+        "Role",
+        "Type"
+    ],
+    "forms": [],
+    "table_columns": [
+        "Name",
+        "Type",
+        "License Number",
+        "License Exp Date",
+        "Status"
+    ],
+    "tabs": [],
+    "cards": [],
+    "charts": [],
+    "search_boxes": [
+        "search by name"
+    ],
+    "headings": []
+}

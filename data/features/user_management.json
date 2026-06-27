@@ -1,0 +1,25 @@
+{
+    "title": "User Management",
+    "buttons": [
+        "Invite User"
+    ],
+    "filters": [],
+    "forms": [],
+    "table_columns": [
+        "Name",
+        "Email",
+        "Associated Facilities",
+        "Last Updated",
+        "Actions"
+    ],
+    "tabs": [
+        "Members",
+        "Pending Invites"
+    ],
+    "cards": [],
+    "charts": [],
+    "search_boxes": [
+        "search box"
+    ],
+    "headings": []
+}

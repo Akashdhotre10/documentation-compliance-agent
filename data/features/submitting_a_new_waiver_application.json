@@ -1,0 +1,26 @@
+{
+    "title": "Submitting a New Waiver Application",
+    "buttons": [
+        "+ New Application",
+        "Next",
+        "×"
+    ],
+    "filters": [],
+    "forms": [
+        "request details"
+    ],
+    "table_columns": [],
+    "tabs": [
+        "Waiver Type",
+        "Select Location",
+        "Fill Application"
+    ],
+    "cards": [
+        "waiver request cards"
+    ],
+    "charts": [],
+    "search_boxes": [],
+    "headings": [
+        "Select Waiver Type"
+    ]
+}

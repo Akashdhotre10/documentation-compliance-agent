@@ -1,0 +1,23 @@
+{
+    "title": "Action Items",
+    "buttons": [],
+    "filters": [
+        "Status",
+        "Priority"
+    ],
+    "forms": [],
+    "table_columns": [
+        "ID",
+        "Name",
+        "Status",
+        "Priority",
+        "Due Date"
+    ],
+    "tabs": [],
+    "cards": [],
+    "charts": [
+        "doughnut chart"
+    ],
+    "search_boxes": [],
+    "headings": []
+}

@@ -1,0 +1,17 @@
+{
+    "title": "Signing In",
+    "buttons": [
+        "Login"
+    ],
+    "filters": [],
+    "forms": [
+        "Email",
+        "Password"
+    ],
+    "table_columns": [],
+    "tabs": [],
+    "cards": [],
+    "charts": [],
+    "search_boxes": [],
+    "headings": []
+}
