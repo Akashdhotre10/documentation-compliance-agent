@@ -5,11 +5,7 @@ browser = BrowserManager(headless=False)
 
 playwright, chrome, page = browser.launch()
 
-login = Login(page)
-
-login.login()
-
-input("\nPress ENTER to close browser...")
+Login(page).login()
 
 chrome.close()
 

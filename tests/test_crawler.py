@@ -25,7 +25,7 @@ for page_name in crawler.NAVIGATION:
 
     print(f"Saved {filename}.json")
 
-input("\nFinished. Press ENTER...")
+print("Website Crawling Completed")
 
 chrome.close()
 

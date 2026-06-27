@@ -30,7 +30,7 @@ class WebsiteCrawler:
 
             self.page.wait_for_load_state("networkidle")
 
-            print("✓ Opened")
+            print("[OK] Opened")
 
             print("Current URL:", self.page.url)
 
@@ -38,6 +38,6 @@ class WebsiteCrawler:
 
         except TimeoutError:
 
-            print(f"✗ Failed to open {page_name}")
+            print(f"[Failed] to open {page_name}")
 
             return False
