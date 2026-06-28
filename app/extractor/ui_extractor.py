@@ -3,6 +3,8 @@ import os
 import re
 
 
+
+
 class UIExtractor:
     """
     Extract visible UI components from the current page.
@@ -320,24 +322,32 @@ class UIExtractor:
 
         try:
             chart_selector = ",".join([
-                ".recharts-wrapper",
-                ".apexcharts-canvas",
-                ".highcharts-container",
-                ".echarts-for-react",
-                ".chart-container",
-                "canvas.chartjs-render-monitor"
-            ])
+            ".recharts-wrapper",
+            ".apexcharts-canvas",
+            ".highcharts-container",
+            ".echarts-for-react",
+            ".chart-container",
+            "canvas.chartjs-render-monitor",
+            "[data-testid*='chart']"
+        ])
 
-            charts = self.page.locator(chart_selector).count()
-            data["charts"] = charts
+            charts = self.page.locator(chart_selector)
+
+            visible_charts = 0
+
+            for i in range(charts.count()):
+                try:
+                    if charts.nth(i).is_visible():
+                        visible_charts += 1
+                except:
+                    pass
+
+            data["charts"] = visible_charts
+
         except Exception:
             data["charts"] = 0
 
-        try:
-            charts = self.page.locator("canvas,svg,.recharts-wrapper").count()
-            data["charts"] = charts
-        except Exception:
-            data["charts"] = 0
+        
 
         # =====================================================
         # DEBUG

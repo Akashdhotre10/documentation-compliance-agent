@@ -96,7 +96,7 @@ tr:nth-child(even) {
 <div class="container">
 <div class="header">
 <h1>AI Documentation Compliance Report</h1>
-<p><b>Generated:</b> 28 June 2026 13:21</p>
+<p><b>Generated:</b> 28 June 2026 19:38</p>
 </div>
 <div class="score">
 46%
@@ -113,11 +113,11 @@ tr:nth-child(even) {
 </div>
 <div class="stat-card">
 <h3>Missing</h3>
-<h2>12</h2>
+<h2>3</h2>
 </div>
 <div class="stat-card">
 <h3>Extra</h3>
-<h2>5</h2>
+<h2>4</h2>
 </div>
 <div class="stat-card">
 <h3>Compliance</h3>
@@ -128,35 +128,30 @@ tr:nth-child(even) {
 
 <p>Action Items</p>
 
-<div class="card">
 
-<h2>Captured Screenshot</h2>
+            <div class="card">
+            <h2>Captured Screenshot</h2>
 
-<img
-src="../screenshots/action_items.png"
-style="
-width:100%;
-border-radius:10px;
-border:1px solid #ddd;
-">
+            <img src="../screenshots/action_items.png" style="width:100%;border-radius:10px;border:1px solid #ddd;" />
 
-</div>
+            </div>
+            
 <div class="card">
 <h2>Matched Elements</h2>
 <ul>
-<li>✅ Action Items</li><li>✅ Name</li><li>✅ Priority</li><li>✅ Status</li><li>✅ Due Date</li>
+<li>✅ Action Items page collects pending items</li><li>✅ Items are listed with the columns ID is missing but Due Date, Name, Priority, and Status are present</li><li>✅ Filter the list by Status and Priority</li><li>✅ Status values include Done and In Process</li><li>✅ Priority values are High, Medium, and Low</li>
 </ul>
 </div>
 <div class="card">
 <h2>Missing Elements</h2>
 <ul>
-<li>❌ URL /dashboard/action-items</li><li>❌ The Action Items page collects pending items that require your attention.</li><li>❌ Items are listed with the columns ID, Name, Status, Priority, and Due Date. Each Name links</li><li>❌ to the relevant record so you can act on it. You can filter the list by Status and Priority using the</li><li>❌ controls at the top right.</li><li>❌ Status values include Done and In Process.</li><li>❌ Priority values are High, Medium, and Low.</li><li>❌ Due Date shows how far an item is overdue or when it is due.</li><li>❌ A summary doughnut chart shows the total number of action items broken down by priority. The</li><li>❌ same outstanding count is reflected by the notification badge in the header.</li><li>❌ Filter</li><li>❌ ID</li>
+<li>❌ ID column in the table</li><li>❌ Summary doughnut chart showing the total number of action items broken down by priority</li><li>❌ Notification badge in the header</li>
 </ul>
 </div>
 <div class="card">
 <h2>Extra Elements</h2>
 <ul>
-<li>⚠ https://white-cliff-0bca3ed00.1.azurestaticapps.net/dashboard/action-items</li><li>⚠ + New Application</li><li>⚠ Take a Tour</li><li>⚠ Search</li><li>⚠ Action Items High Low Medium Total</li>
+<li>⚠ + New Application button</li><li>⚠ Search box</li><li>⚠ Take a Tour button</li><li>⚠ Two charts instead of one doughnut chart</li>
 </ul>
 </div>
 <div class="card">
@@ -169,13 +164,13 @@ border:1px solid #ddd;
 <th>Severity</th>
 <th>Confidence</th>
 </tr>
-<tr><td>URL /dashboard/action-items</td><td>URL /dashboard/action-items</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>The Action Items page collects pending items that require your attention.</td><td>The Action Items page collects pending items that require your attention.</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>Items are listed with the columns ID, Name, Status, Priority, and Due Date. Each Name links</td><td>Items are listed with the columns ID, Name, Status, Priority, and Due Date. Each Name links</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>to the relevant record so you can act on it. You can filter the list by Status and Priority using the</td><td>to the relevant record so you can act on it. You can filter the list by Status and Priority using the</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>controls at the top right.</td><td>controls at the top right.</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>Status values include Done and In Process.</td><td>Status values include Done and In Process.</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>Priority values are High, Medium, and Low.</td><td>Priority values are High, Medium, and Low.</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>Due Date shows how far an item is overdue or when it is due.</td><td>Due Date shows how far an item is overdue or when it is due.</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>A summary doughnut chart shows the total number of action items broken down by priority. The</td><td>A summary doughnut chart shows the total number of action items broken down by priority. The</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>same outstanding count is reflected by the notification badge in the header.</td><td>same outstanding count is reflected by the notification badge in the header.</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>Filter</td><td>Filter</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>ID</td><td>ID</td><td>Not Found</td><td>Medium</td><td>90%</td></tr>
+<tr><td>Table</td><td>ID column</td><td>No ID column</td><td>Medium</td><td>95%</td></tr><tr><td>Chart</td><td>One doughnut chart</td><td>Two charts</td><td>Medium</td><td>95%</td></tr>
 </table>
 </div>
 <div class="card">
 <h2>AI Recommendation</h2>
 <p>
-Compliance generated using deterministic fuzzy matching because the AI response was invalid.
+The live website UI is missing some features and has some extra features compared to the official documentation
 </p>
 </div>
 
@@ -254,99 +249,19 @@ Compliance generated using deterministic fuzzy matching because the AI response 
             </tr>
             
                 <tr>
-                    <td>URL /dashboard/action-items</td>
-                    <td>URL /dashboard/action-items</td>
-                    <td>Not Found</td>
+                    <td>Table</td>
+                    <td>ID column</td>
+                    <td>No ID column</td>
                     <td style="color:#f39c12;font-weight:bold;">Medium</td>
-                    <td>90%</td>
+                    <td>95%</td>
                 </tr>
                 
                 <tr>
-                    <td>The Action Items page collects pending items that require your attention.</td>
-                    <td>The Action Items page collects pending items that require your attention.</td>
-                    <td>Not Found</td>
+                    <td>Chart</td>
+                    <td>One doughnut chart</td>
+                    <td>Two charts</td>
                     <td style="color:#f39c12;font-weight:bold;">Medium</td>
-                    <td>90%</td>
-                </tr>
-                
-                <tr>
-                    <td>Items are listed with the columns ID, Name, Status, Priority, and Due Date. Each Name links</td>
-                    <td>Items are listed with the columns ID, Name, Status, Priority, and Due Date. Each Name links</td>
-                    <td>Not Found</td>
-                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
-                    <td>90%</td>
-                </tr>
-                
-                <tr>
-                    <td>to the relevant record so you can act on it. You can filter the list by Status and Priority using the</td>
-                    <td>to the relevant record so you can act on it. You can filter the list by Status and Priority using the</td>
-                    <td>Not Found</td>
-                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
-                    <td>90%</td>
-                </tr>
-                
-                <tr>
-                    <td>controls at the top right.</td>
-                    <td>controls at the top right.</td>
-                    <td>Not Found</td>
-                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
-                    <td>90%</td>
-                </tr>
-                
-                <tr>
-                    <td>Status values include Done and In Process.</td>
-                    <td>Status values include Done and In Process.</td>
-                    <td>Not Found</td>
-                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
-                    <td>90%</td>
-                </tr>
-                
-                <tr>
-                    <td>Priority values are High, Medium, and Low.</td>
-                    <td>Priority values are High, Medium, and Low.</td>
-                    <td>Not Found</td>
-                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
-                    <td>90%</td>
-                </tr>
-                
-                <tr>
-                    <td>Due Date shows how far an item is overdue or when it is due.</td>
-                    <td>Due Date shows how far an item is overdue or when it is due.</td>
-                    <td>Not Found</td>
-                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
-                    <td>90%</td>
-                </tr>
-                
-                <tr>
-                    <td>A summary doughnut chart shows the total number of action items broken down by priority. The</td>
-                    <td>A summary doughnut chart shows the total number of action items broken down by priority. The</td>
-                    <td>Not Found</td>
-                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
-                    <td>90%</td>
-                </tr>
-                
-                <tr>
-                    <td>same outstanding count is reflected by the notification badge in the header.</td>
-                    <td>same outstanding count is reflected by the notification badge in the header.</td>
-                    <td>Not Found</td>
-                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
-                    <td>90%</td>
-                </tr>
-                
-                <tr>
-                    <td>Filter</td>
-                    <td>Filter</td>
-                    <td>Not Found</td>
-                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
-                    <td>90%</td>
-                </tr>
-                
-                <tr>
-                    <td>ID</td>
-                    <td>ID</td>
-                    <td>Not Found</td>
-                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
-                    <td>90%</td>
+                    <td>95%</td>
                 </tr>
                 </table></div>
 <div class="card">

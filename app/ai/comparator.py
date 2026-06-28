@@ -55,12 +55,10 @@ class Comparator:
         )
 
         print("\nSEMANTIC MATCH")
-
         print("Website Page :", ui["title"])
 
-        print("Documentation :", documentation["title"])
-
         if documentation is None:
+            print("Documentation : None")
 
             return {
                 "compliance_score": 0,
@@ -69,6 +67,8 @@ class Comparator:
                 "extra": [],
                 "summary": f"No documentation found for page '{ui['title']}'"
             }
+
+        print("Documentation :", documentation["title"])
 
         # --------------------------
         # Clean UI
@@ -307,11 +307,13 @@ class Comparator:
         print("Extra   :", len(validated.get("extra", [])))
         print("Component Results:", validated.get("component_results"))
         print("=================================\n")
+
+        
         validated["compliance_score"] = self.score_calculator.calculate(
-        matched=validated.get("matched", []),
-        missing=validated.get("missing", []),
-        extra=validated.get("extra", []),
-        component_results=validated.get("component_results")
-    )
+            matched=validated.get("matched", []),
+            missing=validated.get("missing", []),
+            extra=validated.get("extra", []),
+            component_results=validated.get("component_results")
+        )
 
         return validated

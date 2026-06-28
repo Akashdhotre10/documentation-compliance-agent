@@ -96,7 +96,7 @@ tr:nth-child(even) {
 <div class="container">
 <div class="header">
 <h1>AI Documentation Compliance Report</h1>
-<p><b>Generated:</b> 28 June 2026 13:21</p>
+<p><b>Generated:</b> 28 June 2026 19:38</p>
 </div>
 <div class="score">
 60%
@@ -109,15 +109,15 @@ tr:nth-child(even) {
 <div class="stats">
 <div class="stat-card">
 <h3>Matched</h3>
-<h2>7</h2>
+<h2>4</h2>
 </div>
 <div class="stat-card">
 <h3>Missing</h3>
-<h2>9</h2>
+<h2>2</h2>
 </div>
 <div class="stat-card">
 <h3>Extra</h3>
-<h2>6</h2>
+<h2>2</h2>
 </div>
 <div class="stat-card">
 <h3>Compliance</h3>
@@ -128,35 +128,30 @@ tr:nth-child(even) {
 
 <p>User Management</p>
 
-<div class="card">
 
-<h2>Captured Screenshot</h2>
+            <div class="card">
+            <h2>Captured Screenshot</h2>
 
-<img
-src="../screenshots/user_management.png"
-style="
-width:100%;
-border-radius:10px;
-border:1px solid #ddd;
-">
+            <img src="../screenshots/user_management.png" style="width:100%;border-radius:10px;border:1px solid #ddd;" />
 
-</div>
+            </div>
+            
 <div class="card">
 <h2>Matched Elements</h2>
 <ul>
-<li>✅ User Management</li><li>✅ Search</li><li>✅ Email</li><li>✅ Name</li><li>✅ Actions</li><li>✅ Associated Facilities</li><li>✅ Last Updated</li>
+<li>✅ User Management page</li><li>✅ Invite User button</li><li>✅ Search box</li><li>✅ Table with columns: Name, Email, Associated Facilities, Last Updated, Actions</li>
 </ul>
 </div>
 <div class="card">
 <h2>Missing Elements</h2>
 <ul>
-<li>❌ URL /dashboard/user-management</li><li>❌ The User Management page lets organisation administrators view and manage the people who</li><li>❌ can access WaiverPro on behalf of the organisation.</li><li>❌ Two tabs separate current Members from Pending Invites, each showing a count. The table lists</li><li>❌ each user with the columns Name, Email, Associated Facilities, Last Updated, and Actions</li><li>❌ (edit and remove). To add someone, click Invite User in the top-right corner. Use the search box to</li><li>❌ locate a specific user, and the paging controls to move through the list.</li><li>❌ Add</li><li>❌ Edit</li>
+<li>❌ Two tabs separate current Members from Pending Invites</li><li>❌ Count for Members and Pending Invites</li>
 </ul>
 </div>
 <div class="card">
 <h2>Extra Elements</h2>
 <ul>
-<li>⚠ https://white-cliff-0bca3ed00.1.azurestaticapps.net/dashboard/user-management</li><li>⚠ + New Application</li><li>⚠ Invite User</li><li>⚠ Member ()</li><li>⚠ Pending Invites</li><li>⚠ Take a Tour</li>
+<li>⚠ + New Application button</li><li>⚠ Take a Tour button</li>
 </ul>
 </div>
 <div class="card">
@@ -169,13 +164,13 @@ border:1px solid #ddd;
 <th>Severity</th>
 <th>Confidence</th>
 </tr>
-<tr><td>URL /dashboard/user-management</td><td>URL /dashboard/user-management</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>The User Management page lets organisation administrators view and manage the people who</td><td>The User Management page lets organisation administrators view and manage the people who</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>can access WaiverPro on behalf of the organisation.</td><td>can access WaiverPro on behalf of the organisation.</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>Two tabs separate current Members from Pending Invites, each showing a count. The table lists</td><td>Two tabs separate current Members from Pending Invites, each showing a count. The table lists</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>each user with the columns Name, Email, Associated Facilities, Last Updated, and Actions</td><td>each user with the columns Name, Email, Associated Facilities, Last Updated, and Actions</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>(edit and remove). To add someone, click Invite User in the top-right corner. Use the search box to</td><td>(edit and remove). To add someone, click Invite User in the top-right corner. Use the search box to</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>locate a specific user, and the paging controls to move through the list.</td><td>locate a specific user, and the paging controls to move through the list.</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>Add</td><td>Add</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>Edit</td><td>Edit</td><td>Not Found</td><td>Medium</td><td>90%</td></tr>
+<tr><td>Tabs</td><td>Two tabs separate current Members from Pending Invites</td><td>No tabs found</td><td>Medium</td><td>95%</td></tr><tr><td>Table headers</td><td>Name, Email, Associated Facilities, Last Updated, Actions</td><td>Actions, Associated Facilities, Email, Last Updated, Name</td><td>Low</td><td>95%</td></tr>
 </table>
 </div>
 <div class="card">
 <h2>AI Recommendation</h2>
 <p>
-Compliance generated using deterministic fuzzy matching because the AI response was invalid.
+The User Management page has some minor differences and missing features compared to the official documentation.
 </p>
 </div>
 
@@ -254,75 +249,19 @@ Compliance generated using deterministic fuzzy matching because the AI response 
             </tr>
             
                 <tr>
-                    <td>URL /dashboard/user-management</td>
-                    <td>URL /dashboard/user-management</td>
-                    <td>Not Found</td>
+                    <td>Tabs</td>
+                    <td>Two tabs separate current Members from Pending Invites</td>
+                    <td>No tabs found</td>
                     <td style="color:#f39c12;font-weight:bold;">Medium</td>
-                    <td>90%</td>
+                    <td>95%</td>
                 </tr>
                 
                 <tr>
-                    <td>The User Management page lets organisation administrators view and manage the people who</td>
-                    <td>The User Management page lets organisation administrators view and manage the people who</td>
-                    <td>Not Found</td>
-                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
-                    <td>90%</td>
-                </tr>
-                
-                <tr>
-                    <td>can access WaiverPro on behalf of the organisation.</td>
-                    <td>can access WaiverPro on behalf of the organisation.</td>
-                    <td>Not Found</td>
-                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
-                    <td>90%</td>
-                </tr>
-                
-                <tr>
-                    <td>Two tabs separate current Members from Pending Invites, each showing a count. The table lists</td>
-                    <td>Two tabs separate current Members from Pending Invites, each showing a count. The table lists</td>
-                    <td>Not Found</td>
-                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
-                    <td>90%</td>
-                </tr>
-                
-                <tr>
-                    <td>each user with the columns Name, Email, Associated Facilities, Last Updated, and Actions</td>
-                    <td>each user with the columns Name, Email, Associated Facilities, Last Updated, and Actions</td>
-                    <td>Not Found</td>
-                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
-                    <td>90%</td>
-                </tr>
-                
-                <tr>
-                    <td>(edit and remove). To add someone, click Invite User in the top-right corner. Use the search box to</td>
-                    <td>(edit and remove). To add someone, click Invite User in the top-right corner. Use the search box to</td>
-                    <td>Not Found</td>
-                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
-                    <td>90%</td>
-                </tr>
-                
-                <tr>
-                    <td>locate a specific user, and the paging controls to move through the list.</td>
-                    <td>locate a specific user, and the paging controls to move through the list.</td>
-                    <td>Not Found</td>
-                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
-                    <td>90%</td>
-                </tr>
-                
-                <tr>
-                    <td>Add</td>
-                    <td>Add</td>
-                    <td>Not Found</td>
-                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
-                    <td>90%</td>
-                </tr>
-                
-                <tr>
-                    <td>Edit</td>
-                    <td>Edit</td>
-                    <td>Not Found</td>
-                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
-                    <td>90%</td>
+                    <td>Table headers</td>
+                    <td>Name, Email, Associated Facilities, Last Updated, Actions</td>
+                    <td>Actions, Associated Facilities, Email, Last Updated, Name</td>
+                    <td style="color:#2ecc71;font-weight:bold;">Low</td>
+                    <td>95%</td>
                 </tr>
                 </table></div>
 <div class="card">

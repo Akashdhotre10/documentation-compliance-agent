@@ -16,6 +16,8 @@ class ComplianceEngine:
         results = []
 
         for file in extracted.glob("*.json"):
+            if "_report" in file.stem:
+                continue
             with open(file, encoding="utf-8") as f:
                 data = json.load(f)
 
