@@ -1,6 +1,7 @@
 from app.report.coverage_calculator import CoverageCalculator
 from pathlib import Path
 from datetime import datetime
+import base64
 
 
 class ReportGenerator:
@@ -30,32 +31,36 @@ class ReportGenerator:
 
         # Prefer screenshot named after base_name, but also accept base_name + '_report'
         image_candidates = [f"{base_name}.png", f"{base_name}_report.png"]
-        image_path = None
+
+        image_base64 = None
+
         for candidate in image_candidates:
             candidate_path = Path("screenshots") / candidate
+
             if candidate_path.exists():
-                # Use relative path from reports/ folder
-                image_path = f"../screenshots/{candidate}"
+                with open(candidate_path, "rb") as img:
+                    image_base64 = base64.b64encode(img.read()).decode()
                 break
 
-        # Build screenshot HTML (show placeholder if missing)
-        if image_path:
+        if image_base64:
             screenshot_html = f"""
             <div class="card">
-            <h2>Captured Screenshot</h2>
+                <h2>Captured Screenshot</h2>
 
-            <img src="{image_path}" style="width:100%;border-radius:10px;border:1px solid #ddd;" />
-
+                <img
+                    src="data:image/png;base64,{image_base64}"
+                    style="width:100%;
+                           border-radius:10px;
+                           border:1px solid #ddd;">
             </div>
             """
         else:
             screenshot_html = """
             <div class="card">
-            <h2>Captured Screenshot</h2>
-            <p><em>No screenshot available for this page.</em></p>
+                <h2>Captured Screenshot</h2>
+                <p><em>No screenshot available.</em></p>
             </div>
             """
-
 
         coverage_html = ""
 

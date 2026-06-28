@@ -4,13 +4,16 @@
         "content": "WaiverPro is a web-based platform for managing healthcare regulatory waiver requests from\nsubmission through approval. This manual explains how to navigate the application, submit and\ntrack waiver requests, manage facilities and users, and obtain support.\nWho should use this guide\nThis guide is written for provider-portal users — facility administrators and staff who prepare,\nsubmit, and monitor waiver applications on behalf of their organisation.\nScope\nThis document describes the provider-facing web application. Every screen, label, and button\ndescribed here reflects the live product. Figures show live account data; the specific records on your\nscreen will differ from the examples pictured.\nCONVENTIONS\nButton labels and on-screen text are shown in bold. Web addresses and field values are shown in\nmonospace . Each section also lists the URL path of the screen it describes, relative to the site’s base\naddress.\n",
         "page": 3,
         "buttons": [
-            "Submit"
+            "labels and on",
+            "this guide"
         ],
         "forms": [
             "Facility"
         ],
         "table_headers": [],
-        "cards": [],
+        "cards": [
+            "Organisation"
+        ],
         "tabs": [],
         "badges": [],
         "charts": []
@@ -20,8 +23,8 @@
         "content": "URL /\nOpen WaiverPro in your web browser. The public landing page introduces the platform and lists the\nwaiver programs currently available.\nKey elements of the landing page:\nHeading — “Healthcare Waiver Management”, with the tagline “Streamline your regulatory\nwaiver process from submission to approval”.\nSearch waivers — the search box (placeholder Search waivers ) filters the program list by\nname.\nAll Waiver Programs — quick-filter buttons name each program, and each published program\nappears as a card showing its name, description, Processing Time, Waiver Period, and an\neligibility checklist. A program that is not currently open shows a status note (for example,\n“Expired”, with the dates it was available).\nGetting Started — the button in the top-right corner takes you to the sign-in screen.\nFooter — links to Privacy Policy and Terms of Service, with the line “Copyright © 2025\nWaiverPro”.\nTo begin, click Getting Started in the top-right corner of the page.\n",
         "page": 4,
         "buttons": [
-            "Filter",
-            "Search"
+            "Getting Started in the top",
+            "in the top"
         ],
         "forms": [
             "Name",
@@ -29,9 +32,13 @@
             "Status"
         ],
         "table_headers": [],
-        "cards": [],
+        "cards": [
+            "card"
+        ],
         "tabs": [],
-        "badges": [],
+        "badges": [
+            "Expired"
+        ],
         "charts": [
             "line"
         ]
@@ -40,7 +47,10 @@
         "title": "Signing In",
         "content": "URL /login\nThe sign-in screen authenticates you into the provider portal.\n1. Enter your Email (placeholder m@example.com ).\n2. Enter your Password. Passwords must be at least 6 characters.\n3. Click Login.\nIf you have forgotten your password, use the Forgot your password? link beside the password\nfield to begin recovery.\nAfter a successful sign-in you are taken to the My Applications dashboard.\n",
         "page": 6,
-        "buttons": [],
+        "buttons": [
+            "Login",
+            "the Forgot your password"
+        ],
         "forms": [
             "Email",
             "Password"
@@ -56,14 +66,17 @@
         "content": "URL Shared by all signed-in pages ( /dashboard/… )\nOnce signed in, every page shares a common layout: a fixed sidebar on the left and a header along\nthe top.\nnotifications, and your account menu.\nThe sidebar\nAt the top of the sidebar the brand WaiverPro appears with the label “Healthcare Waiver\nManagement”, followed by the primary action button + New Application. The navigation items, in\norder, are:\nMy Applications — your waiver applications dashboard.\nFacilities — facilities you manage or belong to.\nAction Items — pending items that require your attention.\nUser Management — manage the users in your organisation.\nAnnouncements — system and program updates.\nSettings — account and preference settings.\nBelow a Support heading, four further items appear: FAQs, Tickets, Contact, and Take a Tour\n(which launches a guided walkthrough of the interface).\nThe header\nSearch — a search box for the current page.\nNotifications — a bell icon with a badge showing the number of outstanding action items.\nAccount — your initials appear as an avatar; opening it reveals your email address and a\nLogout button.\nTIP\nThe + New Application button is available from the sidebar on every page, so you can start a waiver\nrequest at any time.\n",
         "page": 7,
         "buttons": [
-            "Search"
+            "+ New Application"
         ],
         "forms": [
             "Email",
             "Search"
         ],
         "table_headers": [],
-        "cards": [],
+        "cards": [
+            "Notifications",
+            "Organisation"
+        ],
         "tabs": [],
         "badges": [],
         "charts": []
@@ -86,9 +99,21 @@
             "Type",
             "Waiver ID"
         ],
-        "cards": [],
-        "tabs": [],
-        "badges": [],
+        "cards": [
+            "Applications Overview"
+        ],
+        "tabs": [
+            "All",
+            "Patient Needs Waiver (PNW) Request",
+            "Program Flexibility"
+        ],
+        "badges": [
+            "Approved",
+            "Draft",
+            "Expired",
+            "Rejected",
+            "Submitted"
+        ],
         "charts": [
             "chart",
             "doughnut"
@@ -99,15 +124,26 @@
         "content": "URL Opens as a panel over the current page (no dedicated URL)\nClick + New Application in the sidebar to open the application panel. A progress bar and the step\ntabs Waiver Type, Select Location, and Fill Application show where you are.\nStep 1 — Waiver Type\nUnder “Select Waiver Type”, choose the waiver request that best matches your needs. Each type —\nPatient Needs Waiver (PNW) Request, Program Flexibility (PF) Request, and\nWorkforce Shortage Waiver (WSW) Request — appears as a selectable card with a\ndescription. A type that is not currently open is marked (for example, “Expired”) and cannot be\nselected; the panel notes the dates it was available.\nStep 2 — Select Location\nChoose the facility (and facility type) the request applies to.\nStep 3 — Fill Application\nComplete the request details — contact number, dates, description, supporting documents, and the\nrequired acknowledgement — then submit.\nUse Next to advance through the steps; you can return to an earlier step to make changes, and\nsubmit your completed request on the final step. The × button in the top-right corner closes the\npanel at any time.\n",
         "page": 11,
         "buttons": [
-            "Submit"
+            "Location",
+            "Next to advance through the steps",
+            "Waiver Type",
+            "in the top"
         ],
         "forms": [
             "Facility"
         ],
         "table_headers": [],
-        "cards": [],
-        "tabs": [],
-        "badges": [],
+        "cards": [
+            "card"
+        ],
+        "tabs": [
+            "Fill Application show where you are",
+            "Select Location",
+            "Waiver Type"
+        ],
+        "badges": [
+            "Expired"
+        ],
         "charts": [
             "bar"
         ]
@@ -117,8 +153,7 @@
         "content": "URL /dashboard/facilities\nThe Facilities page lists the facilities in your organisation and tracks the status of their waiver\napplications.\nFilters\nA row of status chips filters by application due-date status: All Facilities, Due Soon, Upcoming,\nScheduled, Overdue, and No Status. You can further filter by Role and Type, or search by\nname.\nNOTE\nThe status chips and the Status / License Exp Date columns are part of the Facilities Status\nTracking feature, which can be turned on or off under Settings → Features.\nThe facilities table\nFacilities are listed with the columns Name, Type, License Number, License Exp Date, and\nStatus. Below the table, the Facilities Status Overview summarises the portfolio. Use the paging\ncontrols to move through results.\n",
         "page": 13,
         "buttons": [
-            "Filter",
-            "Search"
+            "the paging"
         ],
         "forms": [
             "Name",
@@ -127,20 +162,28 @@
             "Status"
         ],
         "table_headers": [
+            "License Exp Date",
+            "License Number",
+            "Name",
+            "Type",
             "are part of the Facilities Status"
         ],
-        "cards": [],
+        "cards": [
+            "Facilities Status Overview",
+            "Features",
+            "Organisation"
+        ],
         "tabs": [],
-        "badges": [],
+        "badges": [
+            "Upcoming"
+        ],
         "charts": []
     },
     {
         "title": "Action Items",
         "content": "URL /dashboard/action-items\nThe Action Items page collects pending items that require your attention.\nItems are listed with the columns ID, Name, Status, Priority, and Due Date. Each Name links\nto the relevant record so you can act on it. You can filter the list by Status and Priority using the\ncontrols at the top right.\nStatus values include Done and In Process.\nPriority values are High, Medium, and Low.\nDue Date shows how far an item is overdue or when it is due.\nA summary doughnut chart shows the total number of action items broken down by priority. The\nsame outstanding count is reflected by the notification badge in the header.\n",
         "page": 15,
-        "buttons": [
-            "Filter"
-        ],
+        "buttons": [],
         "forms": [
             "Name",
             "Priority",
@@ -155,7 +198,13 @@
         ],
         "cards": [],
         "tabs": [],
-        "badges": [],
+        "badges": [
+            "Done",
+            "High",
+            "In Process",
+            "Low",
+            "Medium"
+        ],
         "charts": [
             "chart",
             "doughnut"
@@ -166,9 +215,8 @@
         "content": "URL /dashboard/user-management\nThe User Management page lets organisation administrators view and manage the people who\ncan access WaiverPro on behalf of the organisation.\nTwo tabs separate current Members from Pending Invites, each showing a count. The table lists\neach user with the columns Name, Email, Associated Facilities, Last Updated, and Actions\n(edit and remove). To add someone, click Invite User in the top-right corner. Use the search box to\nlocate a specific user, and the paging controls to move through the list.\n",
         "page": 17,
         "buttons": [
-            "Add",
-            "Edit",
-            "Search"
+            "Invite User in the top",
+            "the search box to"
         ],
         "forms": [
             "Email",
@@ -182,8 +230,13 @@
             "Last Updated",
             "Name"
         ],
-        "cards": [],
-        "tabs": [],
+        "cards": [
+            "Organisation"
+        ],
+        "tabs": [
+            "each showing a count",
+            "separate current Members from Pending Invites"
+        ],
         "badges": [],
         "charts": []
     },
@@ -192,7 +245,7 @@
         "content": "URL /dashboard/announcements\nThe Announcements page keeps you informed: “Stay up to date with important system and\nprogram updates.”\nEach announcement shows its title, a status badge — Active, Upcoming, or Expired — an\noptional priority badge (High, Medium, or Low), and its date. Click an announcement to expand\nand read its full detail. A search box helps you find a specific announcement.\n",
         "page": 18,
         "buttons": [
-            "Search"
+            "an announcement to expand"
         ],
         "forms": [
             "Priority",
@@ -202,7 +255,14 @@
         "table_headers": [],
         "cards": [],
         "tabs": [],
-        "badges": [],
+        "badges": [
+            "Active",
+            "Expired",
+            "High",
+            "Low",
+            "Medium",
+            "Upcoming"
+        ],
         "charts": []
     },
     {
@@ -210,9 +270,10 @@
         "content": "The Support section of the sidebar offers three ways to get help.\nFAQs\nURL /dashboard/faqs\nThe FAQs page answers common questions about WaiverPro. Click any question to expand its\nanswer.\nSupport Tickets\nURL /dashboard/tickets\nThe Tickets page (“Support Tickets — Track and manage your support tickets.”) lists your tickets as\ncards showing the ticket number, status and priority badges, and the created/updated times. Filter\nby Status and Priority, and open any ticket with View Details. Click + New Ticket to raise one.\nIn the Create New Support Ticket panel, provide a Title, choose the Related Application,\nselect a Category and Sub Category, add a Description, attach any files, and click Create\nTicket.\nContact\nURL /dashboard/contact\nThe Contact page (“Get in touch with our support team”) provides a message form and the support\nteam’s direct details.\nSupport contact details:\nEmail: support@waiverpro.com\nPhone: +1 (555) 123-4567\nAddress: 123 Healthcare Plaza, Suite 400, New York, NY 10001\nBusiness hours: Monday – Friday, 9:00 AM – 6:00 PM EST (closed weekends)\nMessages sent through the form are typically answered within 24 hours during business days.\n",
         "page": 19,
         "buttons": [
-            "Add",
+            "+ New Ticket to raise one",
             "Create",
-            "Filter"
+            "a Category and Sub Category",
+            "any question to expand its"
         ],
         "forms": [
             "Email",
@@ -220,7 +281,10 @@
             "Status"
         ],
         "table_headers": [],
-        "cards": [],
+        "cards": [
+            "card",
+            "cards"
+        ],
         "tabs": [],
         "badges": [],
         "charts": []
@@ -230,7 +294,8 @@
         "content": "URL /dashboard/settings\nThe Settings page (“Manage your account and preferences”) shows your organisation and is\norganised into four cards.\nOrganisation — the organisation your account belongs to is shown at the top of the page.\nProfile Information — your first name, last name, email (read-only), and phone number. Click\nSave Changes to update.\nNotifications — toggles for Email Notifications, Status Updates, and Action Items.\nSecurity — change your password. A new password must be at least 6 characters long. Click\nChange Password to apply.\nFeatures — toggle experimental or upcoming features: Facilities Status Tracking (shows\napplication due dates and status on the Facilities page) and the FAQ Assistant Chatbot (off by\ndefault).\n",
         "page": 23,
         "buttons": [
-            "Save"
+            "Change Password to apply",
+            "Save Changes to update"
         ],
         "forms": [
             "Email",
@@ -239,9 +304,19 @@
             "Status"
         ],
         "table_headers": [],
-        "cards": [],
+        "cards": [
+            "Features",
+            "Notifications",
+            "Organisation",
+            "Profile Information",
+            "Security",
+            "card",
+            "cards"
+        ],
         "tabs": [],
-        "badges": [],
+        "badges": [
+            "Upcoming"
+        ],
         "charts": []
     },
     {
@@ -256,7 +331,20 @@
         "table_headers": [],
         "cards": [],
         "tabs": [],
-        "badges": [],
+        "badges": [
+            "Active",
+            "Approved",
+            "Done",
+            "Draft",
+            "Expired",
+            "High",
+            "In Process",
+            "Low",
+            "Medium",
+            "Rejected",
+            "Submitted",
+            "Upcoming"
+        ],
         "charts": []
     }
 ]

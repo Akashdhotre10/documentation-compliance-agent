@@ -1,6 +1,10 @@
 
 import json
 
+from numpy.strings import lower
+from sqlalchemy import values
+
+from app.ai.ignore_list import IGNORE
 from app.matcher.page_matcher import PageMatcher
 from app.ai.groq_client import GroqClient
 from app.ai.ui_cleaner import UICleaner
@@ -10,6 +14,8 @@ from app.ai.fuzzy_matcher import FuzzyMatcher
 from app.ai.component_matcher import ComponentMatcher
 from app.ai.section_extractor import SectionExtractor
 from app.report.score_calculator import ScoreCalculator
+
+
 
 
 class Comparator:
@@ -36,6 +42,9 @@ class Comparator:
         self.validator = JSONValidator()
 
         self.score_calculator = ScoreCalculator()
+        
+
+        
 
     def compare_page(self, json_path):
 
@@ -53,6 +62,9 @@ class Comparator:
         documentation = self.matcher.get_page(
             ui["title"]
         )
+
+        documentation.setdefault("headings", [])
+        documentation.setdefault("table_headers", [])
 
         print("\nSEMANTIC MATCH")
         print("Website Page :", ui["title"])
@@ -86,15 +98,40 @@ class Comparator:
         # Prepare lists for fuzzy matching
         # --------------------------
 
-        documentation_items = []
-        documentation_items.append(documentation["title"])
-        documentation_items.extend(
-            line.strip()
-            for line in documentation["content"].split("\n")
-            if line.strip()
-        )
+        documentation_items = [documentation["title"]]
 
-        # Structured fields (future-proof)
+        IGNORE = [
+            "page lets",
+            "page allows",
+            "page enables",
+            "page displays",
+            "the following",
+            "overview",
+        ]
+
+        for line in documentation["content"].split("\n"):
+
+            line = line.strip()
+
+            if not line:
+                continue
+
+            lower = line.lower()
+
+            # Skip descriptive sentences
+            if any(word in lower for word in IGNORE):
+                continue
+
+    # Skip very long paragraphs
+            if len(line.split()) > 8:
+                continue
+
+            documentation_items.append(line)
+
+# Remove duplicates
+        documentation_items = list(dict.fromkeys(documentation_items))
+
+# Add structured documentation fields
         for key in [
             "buttons",
             "forms",
@@ -102,38 +139,68 @@ class Comparator:
             "table_headers",
             "cards",
             "badges",
-            "tabs"
+            "tabs",
         ]:
-            if key in documentation:
-                values = documentation[key]
-                if isinstance(values, list):
-                    documentation_items.extend(values)
-                    documentation_items = list(dict.fromkeys(documentation_items))
+            values = documentation.get(key, [])
+            if isinstance(values, list):
+                documentation_items.extend(values)
+
+        documentation_items = list(dict.fromkeys(documentation_items))
+
+
+# --------------------------
+# UI items
+# --------------------------
 
         ui_items = []
 
+        IGNORE_UI = {
+            "Search",
+            "Take a Tour",
+            "+ New Application",
+            "Previous",
+            "Next",
+        }
+
         for key, value in cleaned.items():
+
             if isinstance(value, list):
-                ui_items.extend(
-                    item.strip()
-                    for item in value
-                    if isinstance(item, str) and item.strip()
-                )
+                for item in value:
+                    if not isinstance(item, str):
+                        continue
+
+                    item = item.strip()
+
+                    if not item:
+                        continue
+
+                    if item in IGNORE_UI:
+                        continue
+
+                    ui_items.append(item)
+
             elif isinstance(value, str):
-                if value.strip():
-                    ui_items.append(value.strip())
+
+                value = value.strip()
+
+                if value:
+                    ui_items.append(value)
 
         ui_items = list(dict.fromkeys(ui_items))
 
-        # --------------------------
-        # RapidFuzz Matching
-        # --------------------------
+
+        print("\nDOCUMENTATION ITEMS")
+        for i in documentation_items:
+            print("-", i)
+
+        print("\nUI ITEMS")
+        for i in ui_items:
+            print("-", i)
 
         matched, missing, extra = self.matcher_ai.match(
             documentation_items,
             ui_items
         )
-
         # ----------------------------------
         # Component-wise comparison
         # ----------------------------------
@@ -141,15 +208,9 @@ class Comparator:
         component_results = {}
 
         components = [
-            "buttons",
-            "forms",
-            "headings",
-            "table_headers",
-            "cards",
-            "badges",
-            "tabs"
+        "headings",
+        "table_headers"
         ]
-
         for component in components:
             expected = documentation.get(component, [])
             actual = cleaned.get(component, [])
@@ -299,21 +360,14 @@ class Comparator:
         validated["component_results"] = component_results
 
         # --------------------------------------------------
-        # Calculate deterministic compliance score
+        # Keep AI score if valid.
+        # Otherwise calculate fuzzy score.
         # --------------------------------------------------
-        print("\n========== SCORE DEBUG ==========")
-        print("Matched :", len(validated.get("matched", [])))
-        print("Missing :", len(validated.get("missing", [])))
-        print("Extra   :", len(validated.get("extra", [])))
-        print("Component Results:", validated.get("component_results"))
-        print("=================================\n")
 
-        
         validated["compliance_score"] = self.score_calculator.calculate(
-            matched=validated.get("matched", []),
-            missing=validated.get("missing", []),
-            extra=validated.get("extra", []),
-            component_results=validated.get("component_results")
+        matched=validated.get("matched", []),
+        missing=validated.get("missing", []),
+        extra=validated.get("extra", [])
         )
 
         return validated

@@ -3,56 +3,78 @@ from rapidfuzz import fuzz
 
 class FuzzyMatcher:
 
-    def __init__(self, threshold=75):
-
+    def __init__(self, threshold=65):
         self.threshold = threshold
+
+    def _normalize(self, text):
+        return (
+            text.lower()
+            .replace("faq", "faqs")
+            .replace("facility", "facilities")
+            .replace("application", "applications")
+            .replace("user", "users")
+            .strip()
+        )
 
     def match(self, documentation, ui):
 
         matched = []
         missing = []
 
+        # Remove duplicates
+        documentation = list(dict.fromkeys(documentation))
+        ui = list(dict.fromkeys(ui))
+
+        normalized_ui = [self._normalize(i) for i in ui]
+
         for doc in documentation:
 
-            found = False
+            doc = doc.strip()
 
-            for item in ui:
+            # Ignore long descriptive paragraphs
+            if len(doc.split()) > 8:
+                continue
 
-                score = fuzz.token_sort_ratio(
-                    doc.lower(),
-                    item.lower()
+            doc_norm = self._normalize(doc)
+
+            best = 0
+
+            for item in normalized_ui:
+
+                score = max(
+                    fuzz.ratio(doc_norm, item),
+                    fuzz.partial_ratio(doc_norm, item),
+                    fuzz.token_sort_ratio(doc_norm, item),
                 )
 
-                if score >= self.threshold:
+                best = max(best, score)
 
-                    matched.append(doc)
-                    found = True
-                    break
-
-            if not found:
-
+            if best >= self.threshold:
+                matched.append(doc)
+            else:
                 missing.append(doc)
 
         extra = []
 
+        normalized_doc = [self._normalize(i) for i in documentation]
+
         for item in ui:
 
-            found = False
+            item_norm = self._normalize(item)
 
-            for doc in documentation:
+            best = 0
 
-                score = fuzz.token_sort_ratio(
-                    doc.lower(),
-                    item.lower()
+            for doc in normalized_doc:
+
+                score = max(
+                    fuzz.ratio(item_norm, doc),
+                    fuzz.partial_ratio(item_norm, doc),
+                    fuzz.token_sort_ratio(item_norm, doc),
                 )
 
-                if score >= self.threshold:
+                best = max(best, score)
 
-                    found = True
-                    break
-
-            if not found:
-
+            if best < self.threshold:
                 extra.append(item)
 
         return matched, missing, extra
