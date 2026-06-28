@@ -23,7 +23,19 @@ class RuleExtractor:
                 if self._is_section_header(normalized):
                     if current and self._is_meaningful_section(current):
                         sections.append(current)
-                    current = {"title": "", "content": "", "page": page["page"]}
+                    current = {
+    "title": "",
+    "content": "",
+    "page": page["page"],
+
+    "buttons": [],
+    "forms": [],
+    "table_headers": [],
+    "cards": [],
+    "tabs": [],
+    "badges": [],
+    "charts": []
+}
                     continue
 
                 if current is None:

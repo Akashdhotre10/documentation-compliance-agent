@@ -29,6 +29,8 @@ for page_name in crawler.NAVIGATION:
 
     extractor.save(filename, data)
 
+    extractor.save_screenshot(filename)
+
     print(f"Saved {filename}.json")
 
 print("Website Crawling Completed")

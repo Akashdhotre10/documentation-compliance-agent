@@ -2,6 +2,8 @@ import json
 from pathlib import Path
 
 
+
+
 class JSONWriter:
 
     @staticmethod
@@ -18,4 +20,8 @@ class JSONWriter:
                 ensure_ascii=False
             )
 
-        print(f"Saved to {output_path}")
+        print("\n====================================")
+        print("JSON successfully generated")
+        print(f"Location : {output_path}")
+        print(f"Objects  : {len(data)}")
+        print("====================================")

@@ -8,37 +8,43 @@
     ],
     "buttons": [
         "+ New Application",
-        "Take a Tour",
-        "All805",
-        "Patient Needs Waiver (PNW) Request630",
-        "Program Flexibility (PF) Request160",
-        "Workforce Shortage Waiver (WSW) Request15",
-        "All Applications 805",
-        "Draft 306",
-        "Submitted 481",
-        "Reopen 0",
-        "In Review 4",
-        "Rejected 0",
+        "All Applications 822",
+        "All822",
         "Approved 6",
+        "Draft 308",
         "Evaluator Review 1",
+        "Expired 0",
+        "In Review 4",
         "Manager Review 7",
+        "Patient Needs Waiver (PNW) Request643",
+        "Program Flexibility (PF) Request164",
+        "Rejected 0",
+        "Reopen 0",
         "Revoked 0",
-        "Expired 0"
+        "Submitted 496",
+        "Take a Tour",
+        "Workforce Shortage Waiver (WSW) Request15"
     ],
     "search_boxes": [
         "Search"
     ],
     "table_headers": [
-        "Waiver ID",
-        "Name",
+        "Created on",
         "Facility",
-        "Type",
+        "Name",
         "Status",
-        "Created on"
+        "Type",
+        "Waiver ID"
     ],
     "forms": [
         "Search"
     ],
     "tables": 1,
+    "cards": [
+        "Applications Overview Approved Draft Evaluator Review In Review Manager Review Submitted 822 Total",
+        "Applications by Type PF PNW WSW 822 Total"
+    ],
+    "badges": [],
+    "tabs": [],
     "charts": 32
 }

@@ -27,7 +27,7 @@ body {
 .score {
     font-size: 60px;
     font-weight: bold;
-    color: #2ecc71;
+    color: #e74c3c;
 }
 
 .bar {
@@ -40,7 +40,7 @@ body {
     padding: 20px;
     margin-top: 20px;
     border-radius: 10px;
-    border-left: 6px solid #2ecc71;
+    border-left: 6px solid #e74c3c;
 }
 
 li {
@@ -96,15 +96,15 @@ tr:nth-child(even) {
 <div class="container">
 <div class="header">
 <h1>AI Documentation Compliance Report</h1>
-<p><b>Generated:</b> 28 June 2026 00:35</p>
+<p><b>Generated:</b> 28 June 2026 13:21</p>
 </div>
 <div class="score">
-100%
+31%
 </div>
 <div class="bar">
-████████████████████
+██████░░░░░░░░░░░░░░
 </div>
-<h2>Status: PASS</h2>
+<h2>Status: FAIL</h2>
 <hr>
 <div class="stats">
 <div class="stat-card">
@@ -113,19 +113,34 @@ tr:nth-child(even) {
 </div>
 <div class="stat-card">
 <h3>Missing</h3>
-<h2>0</h2>
+<h2>1</h2>
 </div>
 <div class="stat-card">
 <h3>Extra</h3>
-<h2>6</h2>
+<h2>9</h2>
 </div>
 <div class="stat-card">
 <h3>Compliance</h3>
-<h2>100%</h2>
+<h2>31%</h2>
 </div>
 </div>
 <h2>Page</h2>
+
 <p>Facilities</p>
+
+<div class="card">
+
+<h2>Captured Screenshot</h2>
+
+<img
+src="../screenshots/facilities.png"
+style="
+width:100%;
+border-radius:10px;
+border:1px solid #ddd;
+">
+
+</div>
 <div class="card">
 <h2>Matched Elements</h2>
 <ul>
@@ -135,13 +150,13 @@ tr:nth-child(even) {
 <div class="card">
 <h2>Missing Elements</h2>
 <ul>
-
+<li>❌ facilities status overview description</li>
 </ul>
 </div>
 <div class="card">
 <h2>Extra Elements</h2>
 <ul>
-<li>⚠ buttons</li><li>⚠ search_boxes</li><li>⚠ table_headers</li><li>⚠ forms</li><li>⚠ tables</li><li>⚠ charts</li>
+<li>⚠ buttons</li><li>⚠ search_boxes</li><li>⚠ table_headers</li><li>⚠ forms</li><li>⚠ tables</li><li>⚠ cards</li><li>⚠ badges</li><li>⚠ tabs</li><li>⚠ charts</li>
 </ul>
 </div>
 <div class="card">
@@ -154,15 +169,98 @@ tr:nth-child(even) {
 <th>Severity</th>
 <th>Confidence</th>
 </tr>
-
+<tr><td>Facilities Status Overview</td><td>description or details</td><td>only cards available</td><td>Medium</td><td>80%</td></tr>
 </table>
 </div>
 <div class="card">
 <h2>AI Recommendation</h2>
 <p>
-Perfect Match
+The live website UI matches the official documentation for the URL and title, but lacks description or details for facilities status overview.
 </p>
 </div>
+
+            <div class="card">
+            <h2>Coverage Report</h2>
+
+            <table style="width:100%;border-collapse:collapse;">
+                <tr>
+                    <th align="left">Component</th>
+                    <th align="center">Matched</th>
+                    <th align="center">Expected</th>
+                    <th align="center">Coverage</th>
+                </tr>
+            
+                <tr>
+                    <td>Buttons</td>
+                    <td align="center">0</td>
+                    <td align="center">2</td>
+                    <td align="center">0%</td>
+                </tr>
+                
+                <tr>
+                    <td>Forms</td>
+                    <td align="center">1</td>
+                    <td align="center">4</td>
+                    <td align="center">25%</td>
+                </tr>
+                
+                <tr>
+                    <td>Headings</td>
+                    <td align="center">0</td>
+                    <td align="center">0</td>
+                    <td align="center">100%</td>
+                </tr>
+                
+                <tr>
+                    <td>Table_Headers</td>
+                    <td align="center">0</td>
+                    <td align="center">1</td>
+                    <td align="center">0%</td>
+                </tr>
+                
+                <tr>
+                    <td>Cards</td>
+                    <td align="center">0</td>
+                    <td align="center">0</td>
+                    <td align="center">100%</td>
+                </tr>
+                
+                <tr>
+                    <td>Badges</td>
+                    <td align="center">0</td>
+                    <td align="center">0</td>
+                    <td align="center">100%</td>
+                </tr>
+                
+                <tr>
+                    <td>Tabs</td>
+                    <td align="center">0</td>
+                    <td align="center">0</td>
+                    <td align="center">100%</td>
+                </tr>
+                </table></div>
+
+            <div class="card">
+            <h2>Discrepancy Report</h2>
+
+            <table style="width:100%;border-collapse:collapse;">
+
+            <tr style="background:#f2f2f2;">
+                <th>Component</th>
+                <th>Expected</th>
+                <th>Actual</th>
+                <th>Severity</th>
+                <th>Confidence</th>
+            </tr>
+            
+                <tr>
+                    <td>Facilities Status Overview</td>
+                    <td>description or details</td>
+                    <td>only cards available</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>80%</td>
+                </tr>
+                </table></div>
 <div class="card">
 <h2>Evidence</h2>
 <p>

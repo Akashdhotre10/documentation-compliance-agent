@@ -6,22 +6,27 @@
     ],
     "buttons": [
         "+ New Application",
-        "Take a Tour",
+        "Priority",
         "Status",
-        "Priority"
+        "Take a Tour"
     ],
     "search_boxes": [
         "Search"
     ],
     "table_headers": [
+        "Due Date",
         "Name",
-        "Status",
         "Priority",
-        "Due Date"
+        "Status"
     ],
     "forms": [
         "Search"
     ],
     "tables": 1,
+    "cards": [
+        "Action Items High Low Medium 12 Total"
+    ],
+    "badges": [],
+    "tabs": [],
     "charts": 54
 }

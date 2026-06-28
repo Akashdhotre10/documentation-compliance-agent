@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Compliance Report</title>
+<style>
+body {
+    background: #eef2f7;
+    font-family: Arial;
+    padding: 40px;
+}
+
+.container {
+    background: white;
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,.15);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.score {
+    font-size: 60px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.bar {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: #fafafa;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border-left: 6px solid #e74c3c;
+}
+
+li {
+    padding: 8px;
+}
+
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    color: gray;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background: #3498db;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: #f7f7f7;
+    padding: 15px;
+    border-radius: 10px;
+    width: 22%;
+    text-align: center;
+    box-shadow: 0 0 6px rgba(0,0,0,.08);
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+<h1>AI Documentation Compliance Report</h1>
+<p><b>Generated:</b> 28 June 2026 13:34</p>
+</div>
+<div class="score">
+51%
+</div>
+<div class="bar">
+██████████░░░░░░░░░░
+</div>
+<h2>Status: FAIL</h2>
+<hr>
+<div class="stats">
+<div class="stat-card">
+<h3>Matched</h3>
+<h2>2</h2>
+</div>
+<div class="stat-card">
+<h3>Missing</h3>
+<h2>8</h2>
+</div>
+<div class="stat-card">
+<h3>Extra</h3>
+<h2>13</h2>
+</div>
+<div class="stat-card">
+<h3>Compliance</h3>
+<h2>51%</h2>
+</div>
+</div>
+<h2>Page</h2>
+
+<p>Announcements</p>
+
+
+            <div class="card">
+            <h2>Captured Screenshot</h2>
+
+            <img src="../screenshots/announcements.png" style="width:100%;border-radius:10px;border:1px solid #ddd;" />
+
+            </div>
+            
+<div class="card">
+<h2>Matched Elements</h2>
+<ul>
+<li>✅ Announcements</li><li>✅ Search</li>
+</ul>
+</div>
+<div class="card">
+<h2>Missing Elements</h2>
+<ul>
+<li>❌ URL /dashboard/announcements</li><li>❌ The Announcements page keeps you informed: “Stay up to date with important system and</li><li>❌ program updates.”</li><li>❌ Each announcement shows its title, a status badge — Active, Upcoming, or Expired — an</li><li>❌ optional priority badge (High, Medium, or Low), and its date. Click an announcement to expand</li><li>❌ and read its full detail. A search box helps you find a specific announcement.</li><li>❌ Priority</li><li>❌ Status</li>
+</ul>
+</div>
+<div class="card">
+<h2>Extra Elements</h2>
+<ul>
+<li>⚠ https://white-cliff-0bca3ed00.1.azurestaticapps.net/dashboard/announcements</li><li>⚠ Introducing Smarter Analytics</li><li>⚠ Introducing Smarter Analytics Expired Medium ..</li><li>⚠ New Application is added</li><li>⚠ New Application is added Expired Medium ..</li><li>⚠ Scheduled Maintainance</li><li>⚠ Scheduled Maintainance Expired High ..</li><li>⚠ Scheduled Maintenance in Progress</li><li>⚠ Scheduled Maintenance in Progress Expired High ..</li><li>⚠ We’re Live! Welcome to Our New Website</li><li>⚠ We’re Live! Welcome to Our New Website Expired Low ..</li><li>⚠ + New Application</li><li>⚠ Take a Tour</li>
+</ul>
+</div>
+<div class="card">
+<h2>Detailed Discrepancy Report</h2>
+<table>
+<tr>
+<th>Component</th>
+<th>Expected</th>
+<th>Actual</th>
+<th>Severity</th>
+<th>Confidence</th>
+</tr>
+<tr><td>URL /dashboard/announcements</td><td>URL /dashboard/announcements</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>The Announcements page keeps you informed: “Stay up to date with important system and</td><td>The Announcements page keeps you informed: “Stay up to date with important system and</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>program updates.”</td><td>program updates.”</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>Each announcement shows its title, a status badge — Active, Upcoming, or Expired — an</td><td>Each announcement shows its title, a status badge — Active, Upcoming, or Expired — an</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>optional priority badge (High, Medium, or Low), and its date. Click an announcement to expand</td><td>optional priority badge (High, Medium, or Low), and its date. Click an announcement to expand</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>and read its full detail. A search box helps you find a specific announcement.</td><td>and read its full detail. A search box helps you find a specific announcement.</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>Priority</td><td>Priority</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>Status</td><td>Status</td><td>Not Found</td><td>Medium</td><td>90%</td></tr>
+</table>
+</div>
+<div class="card">
+<h2>AI Recommendation</h2>
+<p>
+Compliance generated using deterministic fuzzy matching because the AI response was invalid.
+</p>
+</div>
+
+            <div class="card">
+            <h2>Coverage Report</h2>
+
+            <table style="width:100%;border-collapse:collapse;">
+                <tr>
+                    <th align="left">Component</th>
+                    <th align="center">Matched</th>
+                    <th align="center">Expected</th>
+                    <th align="center">Coverage</th>
+                </tr>
+            
+                <tr>
+                    <td>Buttons</td>
+                    <td align="center">0</td>
+                    <td align="center">1</td>
+                    <td align="center">0%</td>
+                </tr>
+                
+                <tr>
+                    <td>Forms</td>
+                    <td align="center">1</td>
+                    <td align="center">3</td>
+                    <td align="center">33%</td>
+                </tr>
+                
+                <tr>
+                    <td>Headings</td>
+                    <td align="center">0</td>
+                    <td align="center">0</td>
+                    <td align="center">100%</td>
+                </tr>
+                
+                <tr>
+                    <td>Table_Headers</td>
+                    <td align="center">0</td>
+                    <td align="center">0</td>
+                    <td align="center">100%</td>
+                </tr>
+                
+                <tr>
+                    <td>Cards</td>
+                    <td align="center">0</td>
+                    <td align="center">0</td>
+                    <td align="center">100%</td>
+                </tr>
+                
+                <tr>
+                    <td>Badges</td>
+                    <td align="center">0</td>
+                    <td align="center">0</td>
+                    <td align="center">100%</td>
+                </tr>
+                
+                <tr>
+                    <td>Tabs</td>
+                    <td align="center">0</td>
+                    <td align="center">0</td>
+                    <td align="center">100%</td>
+                </tr>
+                </table></div>
+
+            <div class="card">
+            <h2>Discrepancy Report</h2>
+
+            <table style="width:100%;border-collapse:collapse;">
+
+            <tr style="background:#f2f2f2;">
+                <th>Component</th>
+                <th>Expected</th>
+                <th>Actual</th>
+                <th>Severity</th>
+                <th>Confidence</th>
+            </tr>
+            
+                <tr>
+                    <td>URL /dashboard/announcements</td>
+                    <td>URL /dashboard/announcements</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>The Announcements page keeps you informed: “Stay up to date with important system and</td>
+                    <td>The Announcements page keeps you informed: “Stay up to date with important system and</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>program updates.”</td>
+                    <td>program updates.”</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>Each announcement shows its title, a status badge — Active, Upcoming, or Expired — an</td>
+                    <td>Each announcement shows its title, a status badge — Active, Upcoming, or Expired — an</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>optional priority badge (High, Medium, or Low), and its date. Click an announcement to expand</td>
+                    <td>optional priority badge (High, Medium, or Low), and its date. Click an announcement to expand</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>and read its full detail. A search box helps you find a specific announcement.</td>
+                    <td>and read its full detail. A search box helps you find a specific announcement.</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>Priority</td>
+                    <td>Priority</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>Status</td>
+                    <td>Status</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                </table></div>
+<div class="card">
+<h2>Evidence</h2>
+<p>
+Screenshot support will be added in the next milestone.
+</p>
+</div>
+<div class="footer">
+Generated by
+<h3>AI Documentation Compliance Agent</h3>
+</div>
+</div>
+</body>
+</html>

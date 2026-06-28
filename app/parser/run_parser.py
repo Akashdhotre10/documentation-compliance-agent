@@ -7,6 +7,7 @@ if str(ROOT) not in sys.path:
 
 from app.parser.pdf_parser import PDFParser
 from app.parser.rule_extractor import RuleExtractor
+from app.parser.documentation_analyzer import DocumentationAnalyzer
 from app.parser.json_writer import JSONWriter
 
 
@@ -18,7 +19,20 @@ extractor = RuleExtractor(pages)
 
 sections = extractor.extract_sections()
 
+# --------------------------------------
+# Analyze documentation
+# --------------------------------------
+
+analyzer = DocumentationAnalyzer()
+
+structured_sections = []
+
+for section in sections:
+    structured_sections.append(
+        analyzer.analyze(section)
+    )
+
 JSONWriter.save(
-    sections,
+    structured_sections,
     "data/extracted/guidelines.json"
 )

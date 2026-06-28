@@ -27,7 +27,7 @@ body {
 .score {
     font-size: 60px;
     font-weight: bold;
-    color: #f39c12;
+    color: #e74c3c;
 }
 
 .bar {
@@ -40,7 +40,7 @@ body {
     padding: 20px;
     margin-top: 20px;
     border-radius: 10px;
-    border-left: 6px solid #f39c12;
+    border-left: 6px solid #e74c3c;
 }
 
 li {
@@ -96,52 +96,67 @@ tr:nth-child(even) {
 <div class="container">
 <div class="header">
 <h1>AI Documentation Compliance Report</h1>
-<p><b>Generated:</b> 28 June 2026 00:30</p>
+<p><b>Generated:</b> 28 June 2026 13:21</p>
 </div>
 <div class="score">
-75%
+55%
 </div>
 <div class="bar">
-███████████████░░░░░
+███████████░░░░░░░░░
 </div>
-<h2>Status: WARNING</h2>
+<h2>Status: FAIL</h2>
 <hr>
 <div class="stats">
 <div class="stat-card">
 <h3>Matched</h3>
-<h2>5</h2>
-</div>
-<div class="stat-card">
-<h3>Missing</h3>
-<h2>1</h2>
-</div>
-<div class="stat-card">
-<h3>Extra</h3>
 <h2>4</h2>
 </div>
 <div class="stat-card">
+<h3>Missing</h3>
+<h2>14</h2>
+</div>
+<div class="stat-card">
+<h3>Extra</h3>
+<h2>30</h2>
+</div>
+<div class="stat-card">
 <h3>Compliance</h3>
-<h2>75%</h2>
+<h2>55%</h2>
 </div>
 </div>
 <h2>Page</h2>
+
 <p>Settings</p>
+
+<div class="card">
+
+<h2>Captured Screenshot</h2>
+
+<img
+src="../screenshots/settings.png"
+style="
+width:100%;
+border-radius:10px;
+border:1px solid #ddd;
+">
+
+</div>
 <div class="card">
 <h2>Matched Elements</h2>
 <ul>
-<li>✅ Organisation</li><li>✅ Profile Information</li><li>✅ Notifications</li><li>✅ Security</li><li>✅ Features</li>
+<li>✅ Settings</li><li>✅ Change Password to apply.</li><li>✅ Email</li><li>✅ Password</li>
 </ul>
 </div>
 <div class="card">
 <h2>Missing Elements</h2>
 <ul>
-<li>❌ Organisation at the top of the page</li>
+<li>❌ URL /dashboard/settings</li><li>❌ The Settings page (“Manage your account and preferences”) shows your organisation and is</li><li>❌ organised into four cards.</li><li>❌ Organisation — the organisation your account belongs to is shown at the top of the page.</li><li>❌ Profile Information — your first name, last name, email (read-only), and phone number. Click</li><li>❌ Save Changes to update.</li><li>❌ Notifications — toggles for Email Notifications, Status Updates, and Action Items.</li><li>❌ Security — change your password. A new password must be at least 6 characters long. Click</li><li>❌ Features — toggle experimental or upcoming features: Facilities Status Tracking (shows</li><li>❌ application due dates and status on the Facilities page) and the FAQ Assistant Chatbot (off by</li><li>❌ default).</li><li>❌ Save</li><li>❌ Name</li><li>❌ Status</li>
 </ul>
 </div>
 <div class="card">
 <h2>Extra Elements</h2>
 <ul>
-<li>⚠ Partner Sample</li><li>⚠ + New Application</li><li>⚠ Take a Tour</li><li>⚠ At least characters search box</li>
+<li>⚠ https://white-cliff-0bca3ed00.1.azurestaticapps.net/dashboard/settings</li><li>⚠ Features</li><li>⚠ Notifications</li><li>⚠ Partner Sample</li><li>⚠ Profile Information</li><li>⚠ Security</li><li>⚠ + New Application</li><li>⚠ Save Changes</li><li>⚠ Take a Tour</li><li>⚠ At least characters</li><li>⚠ Action Items</li><li>⚠ Confirm New Password</li><li>⚠ Current Password</li><li>⚠ Email Notifications</li><li>⚠ FAQ Assistant Chatbot</li><li>⚠ Facilities Status Tracking</li><li>⚠ First Name</li><li>⚠ Last Name</li><li>⚠ Phone Number</li><li>⚠ Status Updates</li><li>⚠ confirmPassword</li><li>⚠ currentPassword</li><li>⚠ firstName</li><li>⚠ lastName</li><li>⚠ phone</li><li>⚠ Features Toggle experimental or upcoming features Facilities Status Tracking Show application due dates and status on the Facilities page FAQ Assistant Chatbot Show the AI FAQ assistant. Off by default to avoid loading it on every page.</li><li>⚠ Notifications Email Notifications Receive updates about your applications Status Updates Get notified when application status changes Action Items Alerts for tasks requiring your attention</li><li>⚠ P ORGANISATION Partner Sample</li><li>⚠ Profile Information First Name Last Name Email Email address cannot be changed Phone Number Save Changes</li><li>⚠ Security Current Password New Password Password must be at least characters long Confirm New Password Change Password</li>
 </ul>
 </div>
 <div class="card">
@@ -154,15 +169,202 @@ tr:nth-child(even) {
 <th>Severity</th>
 <th>Confidence</th>
 </tr>
-<tr><td>Organisation</td><td>Shown at the top of the page</td><td>Not shown at the top of the page</td><td>Medium</td><td>95%</td></tr><tr><td>Features</td><td>Facilities Status Tracking and FAQ Assistant Chatbot</td><td>FAQ Assistant Chatbot is present but Facilities Status Tracking is not explicitly mentioned</td><td>Low</td><td>80%</td></tr>
+<tr><td>URL /dashboard/settings</td><td>URL /dashboard/settings</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>The Settings page (“Manage your account and preferences”) shows your organisation and is</td><td>The Settings page (“Manage your account and preferences”) shows your organisation and is</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>organised into four cards.</td><td>organised into four cards.</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>Organisation — the organisation your account belongs to is shown at the top of the page.</td><td>Organisation — the organisation your account belongs to is shown at the top of the page.</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>Profile Information — your first name, last name, email (read-only), and phone number. Click</td><td>Profile Information — your first name, last name, email (read-only), and phone number. Click</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>Save Changes to update.</td><td>Save Changes to update.</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>Notifications — toggles for Email Notifications, Status Updates, and Action Items.</td><td>Notifications — toggles for Email Notifications, Status Updates, and Action Items.</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>Security — change your password. A new password must be at least 6 characters long. Click</td><td>Security — change your password. A new password must be at least 6 characters long. Click</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>Features — toggle experimental or upcoming features: Facilities Status Tracking (shows</td><td>Features — toggle experimental or upcoming features: Facilities Status Tracking (shows</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>application due dates and status on the Facilities page) and the FAQ Assistant Chatbot (off by</td><td>application due dates and status on the Facilities page) and the FAQ Assistant Chatbot (off by</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>default).</td><td>default).</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>Save</td><td>Save</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>Name</td><td>Name</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>Status</td><td>Status</td><td>Not Found</td><td>Medium</td><td>90%</td></tr>
 </table>
 </div>
 <div class="card">
 <h2>AI Recommendation</h2>
 <p>
-The live website UI has some minor differences and missing features compared to the official documentation
+Compliance generated using deterministic fuzzy matching because the AI response was invalid.
 </p>
 </div>
+
+            <div class="card">
+            <h2>Coverage Report</h2>
+
+            <table style="width:100%;border-collapse:collapse;">
+                <tr>
+                    <th align="left">Component</th>
+                    <th align="center">Matched</th>
+                    <th align="center">Expected</th>
+                    <th align="center">Coverage</th>
+                </tr>
+            
+                <tr>
+                    <td>Buttons</td>
+                    <td align="center">0</td>
+                    <td align="center">1</td>
+                    <td align="center">0%</td>
+                </tr>
+                
+                <tr>
+                    <td>Forms</td>
+                    <td align="center">2</td>
+                    <td align="center">4</td>
+                    <td align="center">50%</td>
+                </tr>
+                
+                <tr>
+                    <td>Headings</td>
+                    <td align="center">0</td>
+                    <td align="center">0</td>
+                    <td align="center">100%</td>
+                </tr>
+                
+                <tr>
+                    <td>Table_Headers</td>
+                    <td align="center">0</td>
+                    <td align="center">0</td>
+                    <td align="center">100%</td>
+                </tr>
+                
+                <tr>
+                    <td>Cards</td>
+                    <td align="center">0</td>
+                    <td align="center">0</td>
+                    <td align="center">100%</td>
+                </tr>
+                
+                <tr>
+                    <td>Badges</td>
+                    <td align="center">0</td>
+                    <td align="center">0</td>
+                    <td align="center">100%</td>
+                </tr>
+                
+                <tr>
+                    <td>Tabs</td>
+                    <td align="center">0</td>
+                    <td align="center">0</td>
+                    <td align="center">100%</td>
+                </tr>
+                </table></div>
+
+            <div class="card">
+            <h2>Discrepancy Report</h2>
+
+            <table style="width:100%;border-collapse:collapse;">
+
+            <tr style="background:#f2f2f2;">
+                <th>Component</th>
+                <th>Expected</th>
+                <th>Actual</th>
+                <th>Severity</th>
+                <th>Confidence</th>
+            </tr>
+            
+                <tr>
+                    <td>URL /dashboard/settings</td>
+                    <td>URL /dashboard/settings</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>The Settings page (“Manage your account and preferences”) shows your organisation and is</td>
+                    <td>The Settings page (“Manage your account and preferences”) shows your organisation and is</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>organised into four cards.</td>
+                    <td>organised into four cards.</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>Organisation — the organisation your account belongs to is shown at the top of the page.</td>
+                    <td>Organisation — the organisation your account belongs to is shown at the top of the page.</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>Profile Information — your first name, last name, email (read-only), and phone number. Click</td>
+                    <td>Profile Information — your first name, last name, email (read-only), and phone number. Click</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>Save Changes to update.</td>
+                    <td>Save Changes to update.</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>Notifications — toggles for Email Notifications, Status Updates, and Action Items.</td>
+                    <td>Notifications — toggles for Email Notifications, Status Updates, and Action Items.</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>Security — change your password. A new password must be at least 6 characters long. Click</td>
+                    <td>Security — change your password. A new password must be at least 6 characters long. Click</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>Features — toggle experimental or upcoming features: Facilities Status Tracking (shows</td>
+                    <td>Features — toggle experimental or upcoming features: Facilities Status Tracking (shows</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>application due dates and status on the Facilities page) and the FAQ Assistant Chatbot (off by</td>
+                    <td>application due dates and status on the Facilities page) and the FAQ Assistant Chatbot (off by</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>default).</td>
+                    <td>default).</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>Save</td>
+                    <td>Save</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>Name</td>
+                    <td>Name</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>Status</td>
+                    <td>Status</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                </table></div>
 <div class="card">
 <h2>Evidence</h2>
 <p>

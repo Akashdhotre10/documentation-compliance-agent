@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Compliance Report</title>
+<style>
+body {
+    background: #eef2f7;
+    font-family: Arial;
+    padding: 40px;
+}
+
+.container {
+    background: white;
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,.15);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.score {
+    font-size: 60px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.bar {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: #fafafa;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border-left: 6px solid #e74c3c;
+}
+
+li {
+    padding: 8px;
+}
+
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    color: gray;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background: #3498db;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: #f7f7f7;
+    padding: 15px;
+    border-radius: 10px;
+    width: 22%;
+    text-align: center;
+    box-shadow: 0 0 6px rgba(0,0,0,.08);
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+<h1>AI Documentation Compliance Report</h1>
+<p><b>Generated:</b> 28 June 2026 13:34</p>
+</div>
+<div class="score">
+31%
+</div>
+<div class="bar">
+██████░░░░░░░░░░░░░░
+</div>
+<h2>Status: FAIL</h2>
+<hr>
+<div class="stats">
+<div class="stat-card">
+<h3>Matched</h3>
+<h2>6</h2>
+</div>
+<div class="stat-card">
+<h3>Missing</h3>
+<h2>15</h2>
+</div>
+<div class="stat-card">
+<h3>Extra</h3>
+<h2>12</h2>
+</div>
+<div class="stat-card">
+<h3>Compliance</h3>
+<h2>31%</h2>
+</div>
+</div>
+<h2>Page</h2>
+
+<p>Facilities</p>
+
+
+            <div class="card">
+            <h2>Captured Screenshot</h2>
+
+            <img src="../screenshots/facilities.png" style="width:100%;border-radius:10px;border:1px solid #ddd;" />
+
+            </div>
+            
+<div class="card">
+<h2>Matched Elements</h2>
+<ul>
+<li>✅ Facilities</li><li>✅ name.</li><li>✅ Search</li><li>✅ Name</li><li>✅ Role</li><li>✅ Status</li>
+</ul>
+</div>
+<div class="card">
+<h2>Missing Elements</h2>
+<ul>
+<li>❌ URL /dashboard/facilities</li><li>❌ The Facilities page lists the facilities in your organisation and tracks the status of their waiver</li><li>❌ applications.</li><li>❌ Filters</li><li>❌ A row of status chips filters by application due-date status: All Facilities, Due Soon, Upcoming,</li><li>❌ Scheduled, Overdue, and No Status. You can further filter by Role and Type, or search by</li><li>❌ NOTE</li><li>❌ The status chips and the Status / License Exp Date columns are part of the Facilities Status</li><li>❌ Tracking feature, which can be turned on or off under Settings → Features.</li><li>❌ The facilities table</li><li>❌ Facilities are listed with the columns Name, Type, License Number, License Exp Date, and</li><li>❌ Status. Below the table, the Facilities Status Overview summarises the portfolio. Use the paging</li><li>❌ controls to move through results.</li><li>❌ Filter</li><li>❌ are part of the Facilities Status</li>
+</ul>
+</div>
+<div class="card">
+<h2>Extra Elements</h2>
+<ul>
+<li>⚠ https://white-cliff-0bca3ed00.1.azurestaticapps.net/dashboard/facilities</li><li>⚠ Facilities Status Overview</li><li>⚠ + New Application</li><li>⚠ Due Soon</li><li>⚠ Overdue</li><li>⚠ Scheduled</li><li>⚠ Take a Tour</li><li>⚠ Type</li><li>⚠ Upcoming</li><li>⚠ License Exp Date</li><li>⚠ License Number</li><li>⚠ Facilities Status Overview Due Soon Upcoming Scheduled Overdue No Status</li>
+</ul>
+</div>
+<div class="card">
+<h2>Detailed Discrepancy Report</h2>
+<table>
+<tr>
+<th>Component</th>
+<th>Expected</th>
+<th>Actual</th>
+<th>Severity</th>
+<th>Confidence</th>
+</tr>
+<tr><td>URL /dashboard/facilities</td><td>URL /dashboard/facilities</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>The Facilities page lists the facilities in your organisation and tracks the status of their waiver</td><td>The Facilities page lists the facilities in your organisation and tracks the status of their waiver</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>applications.</td><td>applications.</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>Filters</td><td>Filters</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>A row of status chips filters by application due-date status: All Facilities, Due Soon, Upcoming,</td><td>A row of status chips filters by application due-date status: All Facilities, Due Soon, Upcoming,</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>Scheduled, Overdue, and No Status. You can further filter by Role and Type, or search by</td><td>Scheduled, Overdue, and No Status. You can further filter by Role and Type, or search by</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>NOTE</td><td>NOTE</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>The status chips and the Status / License Exp Date columns are part of the Facilities Status</td><td>The status chips and the Status / License Exp Date columns are part of the Facilities Status</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>Tracking feature, which can be turned on or off under Settings → Features.</td><td>Tracking feature, which can be turned on or off under Settings → Features.</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>The facilities table</td><td>The facilities table</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>Facilities are listed with the columns Name, Type, License Number, License Exp Date, and</td><td>Facilities are listed with the columns Name, Type, License Number, License Exp Date, and</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>Status. Below the table, the Facilities Status Overview summarises the portfolio. Use the paging</td><td>Status. Below the table, the Facilities Status Overview summarises the portfolio. Use the paging</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>controls to move through results.</td><td>controls to move through results.</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>Filter</td><td>Filter</td><td>Not Found</td><td>Medium</td><td>90%</td></tr><tr><td>are part of the Facilities Status</td><td>are part of the Facilities Status</td><td>Not Found</td><td>Medium</td><td>90%</td></tr>
+</table>
+</div>
+<div class="card">
+<h2>AI Recommendation</h2>
+<p>
+Compliance generated using deterministic fuzzy matching because the AI response was invalid.
+</p>
+</div>
+
+            <div class="card">
+            <h2>Coverage Report</h2>
+
+            <table style="width:100%;border-collapse:collapse;">
+                <tr>
+                    <th align="left">Component</th>
+                    <th align="center">Matched</th>
+                    <th align="center">Expected</th>
+                    <th align="center">Coverage</th>
+                </tr>
+            
+                <tr>
+                    <td>Buttons</td>
+                    <td align="center">0</td>
+                    <td align="center">2</td>
+                    <td align="center">0%</td>
+                </tr>
+                
+                <tr>
+                    <td>Forms</td>
+                    <td align="center">1</td>
+                    <td align="center">4</td>
+                    <td align="center">25%</td>
+                </tr>
+                
+                <tr>
+                    <td>Headings</td>
+                    <td align="center">0</td>
+                    <td align="center">0</td>
+                    <td align="center">100%</td>
+                </tr>
+                
+                <tr>
+                    <td>Table_Headers</td>
+                    <td align="center">0</td>
+                    <td align="center">1</td>
+                    <td align="center">0%</td>
+                </tr>
+                
+                <tr>
+                    <td>Cards</td>
+                    <td align="center">0</td>
+                    <td align="center">0</td>
+                    <td align="center">100%</td>
+                </tr>
+                
+                <tr>
+                    <td>Badges</td>
+                    <td align="center">0</td>
+                    <td align="center">0</td>
+                    <td align="center">100%</td>
+                </tr>
+                
+                <tr>
+                    <td>Tabs</td>
+                    <td align="center">0</td>
+                    <td align="center">0</td>
+                    <td align="center">100%</td>
+                </tr>
+                </table></div>
+
+            <div class="card">
+            <h2>Discrepancy Report</h2>
+
+            <table style="width:100%;border-collapse:collapse;">
+
+            <tr style="background:#f2f2f2;">
+                <th>Component</th>
+                <th>Expected</th>
+                <th>Actual</th>
+                <th>Severity</th>
+                <th>Confidence</th>
+            </tr>
+            
+                <tr>
+                    <td>URL /dashboard/facilities</td>
+                    <td>URL /dashboard/facilities</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>The Facilities page lists the facilities in your organisation and tracks the status of their waiver</td>
+                    <td>The Facilities page lists the facilities in your organisation and tracks the status of their waiver</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>applications.</td>
+                    <td>applications.</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>Filters</td>
+                    <td>Filters</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>A row of status chips filters by application due-date status: All Facilities, Due Soon, Upcoming,</td>
+                    <td>A row of status chips filters by application due-date status: All Facilities, Due Soon, Upcoming,</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>Scheduled, Overdue, and No Status. You can further filter by Role and Type, or search by</td>
+                    <td>Scheduled, Overdue, and No Status. You can further filter by Role and Type, or search by</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>NOTE</td>
+                    <td>NOTE</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>The status chips and the Status / License Exp Date columns are part of the Facilities Status</td>
+                    <td>The status chips and the Status / License Exp Date columns are part of the Facilities Status</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>Tracking feature, which can be turned on or off under Settings → Features.</td>
+                    <td>Tracking feature, which can be turned on or off under Settings → Features.</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>The facilities table</td>
+                    <td>The facilities table</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>Facilities are listed with the columns Name, Type, License Number, License Exp Date, and</td>
+                    <td>Facilities are listed with the columns Name, Type, License Number, License Exp Date, and</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>Status. Below the table, the Facilities Status Overview summarises the portfolio. Use the paging</td>
+                    <td>Status. Below the table, the Facilities Status Overview summarises the portfolio. Use the paging</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>controls to move through results.</td>
+                    <td>controls to move through results.</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>Filter</td>
+                    <td>Filter</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                
+                <tr>
+                    <td>are part of the Facilities Status</td>
+                    <td>are part of the Facilities Status</td>
+                    <td>Not Found</td>
+                    <td style="color:#f39c12;font-weight:bold;">Medium</td>
+                    <td>90%</td>
+                </tr>
+                </table></div>
+<div class="card">
+<h2>Evidence</h2>
+<p>
+Screenshot support will be added in the next milestone.
+</p>
+</div>
+<div class="footer">
+Generated by
+<h3>AI Documentation Compliance Agent</h3>
+</div>
+</div>
+</body>
+</html>

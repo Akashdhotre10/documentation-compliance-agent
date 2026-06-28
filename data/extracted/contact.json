@@ -9,8 +9,8 @@
     ],
     "buttons": [
         "+ New Application",
-        "Take a Tour",
-        "Send Message"
+        "Send Message",
+        "Take a Tour"
     ],
     "search_boxes": [
         "Your name",
@@ -19,15 +19,22 @@
     ],
     "table_headers": [],
     "forms": [
-        "Name",
-        "Your name",
         "Email",
-        "your@email.com",
-        "Subject",
         "How can we help?",
         "Message",
-        "Tell us more about your inquiry..."
+        "Name",
+        "Subject",
+        "Tell us more about your inquiry...",
+        "Your name",
+        "your@email.com"
     ],
     "tables": 0,
+    "cards": [
+        "Contact Information Email support@waiverpro.com Phone +1 (555) 123-4567 Address 123 Healthcare Plaza Suite 400 New York, NY 10001 Business Hours Monday - Friday: 9:00 AM - 6:00 PM EST Saturday - Sunday: Closed",
+        "Quick Response We typically respond to all inquiries within 24 hours during business days. For urgent matters, please call our support line.",
+        "Send us a message Name Email Subject Message Send Message"
+    ],
+    "badges": [],
+    "tabs": [],
     "charts": 16
 }

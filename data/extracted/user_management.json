@@ -6,24 +6,27 @@
     ],
     "buttons": [
         "+ New Application",
-        "Take a Tour",
+        "Invite User",
         "Member (4)",
         "Pending Invites 18",
-        "Invite User"
+        "Take a Tour"
     ],
     "search_boxes": [
         "Search"
     ],
     "table_headers": [
-        "Name",
-        "Email",
+        "Actions",
         "Associated Facilities",
+        "Email",
         "Last Updated",
-        "Actions"
+        "Name"
     ],
     "forms": [
         "Search"
     ],
     "tables": 1,
+    "cards": [],
+    "badges": [],
+    "tabs": [],
     "charts": 27
 }

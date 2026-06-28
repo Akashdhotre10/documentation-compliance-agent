@@ -14,19 +14,31 @@
     ],
     "buttons": [
         "+ New Application",
-        "Take a Tour",
-        "How do I submit a new waiver application?",
-        "What is the typical review time for waiver applications?",
-        "How can I track the status of my application?",
-        "What types of waivers can I apply for?",
         "Can I edit an application after submission?",
+        "How can I track the status of my application?",
         "How do I add or manage facilities?",
+        "How do I contact support?",
+        "How do I submit a new waiver application?",
+        "Take a Tour",
+        "What is the typical review time for waiver applications?",
         "What should I do if my application is rejected?",
-        "How do I contact support?"
+        "What types of waivers can I apply for?"
     ],
     "search_boxes": [],
     "table_headers": [],
     "forms": [],
     "tables": 0,
+    "cards": [
+        "Can I edit an application after submission?",
+        "How can I track the status of my application?",
+        "How do I add or manage facilities?",
+        "How do I contact support?",
+        "How do I submit a new waiver application? Click on the \"+ New Application\" button in the sidebar. You will be guided through the application process step by step. Make sure to have all required documentation ready before starting.",
+        "What is the typical review time for waiver applications?",
+        "What should I do if my application is rejected?",
+        "What types of waivers can I apply for?"
+    ],
+    "badges": [],
+    "tabs": [],
     "charts": 20
 }

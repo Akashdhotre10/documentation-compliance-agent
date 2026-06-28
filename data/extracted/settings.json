@@ -11,29 +11,44 @@
     ],
     "buttons": [
         "+ New Application",
-        "Take a Tour",
+        "Change Password",
         "Save Changes",
-        "Change Password"
+        "Take a Tour"
     ],
     "search_boxes": [
         "At least 6 characters"
     ],
     "table_headers": [],
     "forms": [
-        "First Name",
-        "Last Name",
-        "Email",
-        "Phone Number",
-        "Email Notifications",
-        "Status Updates",
         "Action Items",
-        "Current Password",
-        "New Password",
         "At least 6 characters",
         "Confirm New Password",
+        "Current Password",
+        "Email",
+        "Email Notifications",
+        "FAQ Assistant Chatbot",
         "Facilities Status Tracking",
-        "FAQ Assistant Chatbot"
+        "First Name",
+        "Last Name",
+        "New Password",
+        "Phone Number",
+        "Status Updates",
+        "confirmPassword",
+        "currentPassword",
+        "email",
+        "firstName",
+        "lastName",
+        "phone"
     ],
     "tables": 0,
+    "cards": [
+        "Features Toggle experimental or upcoming features Facilities Status Tracking Show application due dates and status on the Facilities page FAQ Assistant Chatbot Show the AI FAQ assistant. Off by default to avoid loading it on every page.",
+        "Notifications Email Notifications Receive updates about your applications Status Updates Get notified when application status changes Action Items Alerts for tasks requiring your attention",
+        "P ORGANISATION Partner Sample",
+        "Profile Information First Name Last Name Email Email address cannot be changed Phone Number Save Changes",
+        "Security Current Password New Password Password must be at least 6 characters long Confirm New Password Change Password"
+    ],
+    "badges": [],
+    "tabs": [],
     "charts": 12
 }

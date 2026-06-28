@@ -31,9 +31,15 @@ class ComplianceEngine:
             result = self.comparator.compare_page(str(file))
 
             page_name = file.stem.replace("_", " ").title()
+    
+            
 
-            self.report.generate(result, page_name)
-
+            self.report.generate(
+                result,
+                page_name,
+                result.get("component_results")
+        )
+            
             results.append({
                 "page": page_name,
                 "score": result["compliance_score"],
