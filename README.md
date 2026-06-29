@@ -177,6 +177,3 @@ Streamlit provides a lightweight interface for uploading a PDF, entering credent
 - Add a background job mode so large compliance runs can execute asynchronously
 - Improve the UI and reporting experience with more detailed insights and visual analytics
 
-## License
-
-This project is intended for internal evaluation and experimentation. Please check your organization’s usage policy before deploying it in production.
