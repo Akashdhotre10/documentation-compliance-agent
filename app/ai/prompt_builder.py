@@ -59,11 +59,11 @@ Waiver Type = Application Type
 
 90-99 = Minor wording differences
 
-75-89 = Small documented differences
+85-90 = Small documented differences
 
-50-74 = Several missing documented features
+70-84 = Several missing documented features
 
-Below 50 = Major mismatch
+Below 60 = Major mismatch
 
 ====================================================
 OUTPUT FORMAT

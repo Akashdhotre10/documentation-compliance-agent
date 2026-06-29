@@ -8,20 +8,20 @@
     ],
     "buttons": [
         "+ New Application",
-        "All Applications 878",
-        "All878",
+        "All Applications 891",
+        "All891",
         "Approved 6",
-        "Draft 328",
+        "Draft 332",
         "Evaluator Review 1",
         "Expired 0",
         "In Review 4",
         "Manager Review 7",
-        "Patient Needs Waiver (PNW) Request695",
+        "Patient Needs Waiver (PNW) Request708",
         "Program Flexibility (PF) Request168",
         "Rejected 0",
         "Reopen 0",
         "Revoked 0",
-        "Submitted 532",
+        "Submitted 541",
         "Take a Tour",
         "Workforce Shortage Waiver (WSW) Request15"
     ],
@@ -41,8 +41,8 @@
     ],
     "tables": 1,
     "cards": [
-        "Applications Overview Approved Draft Evaluator Review In Review Manager Review Submitted 878 Total",
-        "Applications by Type PNW PF WSW 878 Total"
+        "Applications Overview Approved Draft Evaluator Review In Review Manager Review Submitted 891 Total",
+        "Applications by Type PNW PF WSW 891 Total"
     ],
     "badges": [],
     "tabs": [],
